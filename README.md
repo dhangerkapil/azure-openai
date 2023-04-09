@@ -1,12 +1,10 @@
 # Azure OpenAI Examples
+This repo is a compilation of useful Azure OpenAI Service resources and code samples. [Azure OpenAI API].
 
-This repository shares example code and example prompts for accomplishing common tasks with the [Azure OpenAI API].
+The Azure OpenAI service provides REST API access to OpenAI's powerful language models on the Azure cloud. These models can be easily adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. Users can access the service through REST APIs, Python SDK, or our web-based interface in the Azure OpenAI Studio.
 
-To try these examples yourself, you’ll need an Azure account with Azure OpenAI Service creater. [Create a free account to get started.][Azure OpenAI API]
-
+To try these examples, you’ll need an Azure account with Azure OpenAI Service. [Create a free account to get started.][Azure OpenAI API]
 Most code examples are written in Python, though the concepts can be applied in any language.
-
-In the same way that a cookbook's recipes don't span all possible meals or techniques, these examples don't span all possible use cases or methods. Use them as starting points upon which to elaborate, discover, and invent.
 
 ## Related resources
 
