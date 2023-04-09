@@ -9,7 +9,9 @@ Most code examples are written in Python, though the concepts can be applied in 
 ## Related resources
 
 This repo refers code examples from these repos also:
-https://github.com/jakeatmsft/AzureOpenAIExamples
+
 https://github.com/Azure/azure-openai-samples
+
 https://github.com/microsoft/OpenAIWorkshop
 
+https://github.com/jakeatmsft/AzureOpenAIExamples
