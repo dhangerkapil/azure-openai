@@ -2,8 +2,8 @@ import openai
 openai.api_type = "azure"
 # openai.api_key = "AZURE_OPENAI_API_KEY"
 # openai.api_base = "AZURE_OPENAI_ENDPOINT"
-openai.api_key = "e60b0e586ee74986af2584ddc4023b2f"
-openai.api_base = "https://kdopenai-sc.openai.azure.com/"
+openai.api_key = ""
+openai.api_base = ""
 openai.api_version = "2022-12-01"
 openai.api_type = 'azure'
 
