@@ -1,0 +1,3163 @@
+
+24:  Think works.
+175:  So fabric where we announced
+during our our build event last month. So so fabric is not
+something that you know, this is we started like one year ago or
+something. This this product, which is making for loss or 34
+years and it's it was our reason like we're back, then, that we
+want some sort of unified platform and this slide shows
+that you know every every chief data officer in every
+enterprise.
+180:  They do have these kind of
+challenges and that one is that, you know, there are so many
+projects over there and every system need different class of
+products and then product come from multiple vendors and also
+there is you know issue of integrating at the scale across
+product is really, really complex.
+227:  So you can you can buy, make the
+best of the three products from different vendor, but if they
+they can't talk to each other then it's it's really really you
+know not productive for any kind of business.
+265:  And this is, you know this or
+here this is some sort of like you know sample architecture
+across different enterprises, you see the architecture over
+here, there are different component over there.
+329:  So if you have different
+component from different vendor then you're architecture becomes
+so complex with the time that you don't know like you know
+what are the different products we are using, how data is
+flowing between them or is there are there different copies of
+data across all these systems.
+364:  The other integration one just
+to confirm, is if we were using Sentinel as a seam, how much is
+per view integrated with or fabric integrated with it?
+369:  It's sending them.
+375:  There may be an.
+378:  Again, I'm.
+394:  I'm channeling Della Dev, but
+that would be a a question we would ask right?
+415:  Cause we talked about these and
+the access to data as part of indicators of compromise.
+428:  How much of that is integrated
+into Microsoft Scene Toolkit?
+430:  What?
+442:  I've seen with heard you.
+465:  It's mostly a tight integration
+with defender for cloud, but in terms of Sentinel, I haven't
+worked with any security teams for that.
+471:  Yes, I have deployed.
+475:  Right now we do not.
+486:  OK, we do have defender for
+cloud deployed.
+488:  OK.
+490:  So.
+498:  So no, so I'm I'm still in that.
+515:  I mean, when you say it's a
+target architecture, where is fabric setting?
+535:  Yeah, this is how we are trying
+to like show the pain points that every customer has.
+545:  Ohh OK, because it says target
+architecture.
+563:  I thought it's like you're
+showing where there is overly detailed version.
+565:  OK.
+567:  Yeah.
+595:  So we are saying that, you know
+this is, you know customer right now they do have this kind of
+agreed, yeah, they OK different system.
+619:  And this is, you know, another
+example or here, but quickly I I'll jump into the fabric.
+687:  So then things that in Microsoft
+we do have all these, all these product and and they're all
+these analytics system they do have very predictable pattern
+over there.
+689:  And for us, Microsoft, good
+thing is that we do have product for data integration, data
+engineering, data warehousing, real time, data science and
+business intelligence.
+692:  And then we do our data lake and
+governance.
+712:  So that is the silver lining
+that we do have all these, all these product within Microsoft.
+721:  It means we can do something
+with this product.
+743:  Maybe you can combine them in in
+in in one product or there can be some seamless experience.
+750:  We we can provide to our our
+customer.
+804:  So even after that, you know
+it's still, you know, as you see over here, we do different
+product and customer always struggle that hey you know data
+factory then you know then power BI snaps and you know there's
+snaps park over there.
+869:  So still customer feel that you
+know we do have so many product and then you know they they they
+want some sort of like seamless experience they can go to one UI
+or one product and they can use all these computing and show it
+there and they can have you know all these things and talking to
+each other.
+887:  So that's, that's where, you
+know, Microsoft Fabric come into the picture.
+904:  So this is, you know, the
+project started at at we called it Project Trident.
+919:  So now name is the Microsoft
+Fabric we announced at the build.
+947:  So what we did in the in, in, in
+Microsoft Fabric, we took all our product and we made you know
+11 product out of it.
+972:  So that you know, use the one
+product, but all these compute and then the data format
+everything.
+998:  The all these images they can
+talk to each other, they will work on top of the one copy of
+the data.
+1030:  So that's the whole concept of
+over here is that you know you have the one copy of data and
+all our engines will natively talk to that data.
+1082:  So earlier you know for example
+Power BI pleased to have some internal proprietary format, for
+example the power BI is pointing to your data, then it will pull
+that data into power BI internal format or internal engine and it
+will convert that format and then it will do reporting.
+1114:  So what we did behind the scene
+is that for all these product we change the internal format to
+support the Delta format.
+1155:  It means when power BI is
+working with the data, it's not making a copy of data, it's
+going directly against the one leg and it's talking with the
+with the Delta format directly over there.
+1164:  It means it's super, super fast
+over there.
+1191:  So we change the internal format
+or internal, you know, proprietary format to support
+that delta files natively in all this product.
+1209:  And what is that format so that
+is DD market format.
+1226:  The data bricks has created a
+wrapper on top of park.
+1228:  Call it delta.
+1239:  OK. That's what they're talking
+now.
+1248:  That is becoming almost
+industries industries, right?
+1281:  Yeah, so, so, but but are you
+just wanted to make sure that when you say all these
+components are you saying that fabric is gonna replace all
+those components?
+1288:  So yeah.
+1301:  So Perry, the all these
+components will be replaced by fabric.
+1337:  But right now or in the future
+also, what will happen, for example, kusto, so you can still
+use the kusto, but it will be inside of fabric itself.
+1346:  It will negatively available
+inside the fabric.
+1365:  For example, right now if you
+want to use the kusto or power BI, it will read your data.
+1404:  It will make copy of it and then
+do the processing but with the fabric because this for the the
+Delta format natively and they are available within the fabric
+itself.
+1432:  It means if you have data or
+there in one leg then you can simply use the kusto Azure know
+the power BI snaps everything.
+1466:  It means you have one copy of
+data and you do have one UI and inside that UI you can use any
+of the computing then easily without without changing
+anything.
+1469:  So.
+1578:  So I just wanna clarify, when
+you say 1 lake, are you it's it's any like a pocket format
+files right or does it have to be on a Microsoft one leg a
+platform it it it's one leg is is we call it you know our our
+new sass leg sassman new software as service leg but the
+format is open format, it's delta format I understand but
+I'm just trying to say but we still need to bring the data
+into your assess format and store it there rather than on
+adls and and then it will able to read from that.
+1580:  I'm.
+1592:  I'm I just want to get some
+clarity on on that one.
+1599:  Yeah, that's that's a good
+question.
+1646:  So it will be, you know, one leg
+is is there but thing is that if you are using ADLS or even if
+you are using AWS 3 or something, what you can do for
+example adds adls Gen 2.
+1665:  We do have concept of shortcuts
+and mounting so you can bring that one inside of one leg.
+1676:  You don't need to copy the data
+out there.
+1695:  So right now if your ID is then
+to you don't need to do anything.
+1725:  Go ahead, start using the one
+leg and in the one leg you can connect to adlsgen to and you
+don't need to move.
+1731:  Move your data to the one.
+1744:  So would you say more from the
+clarification standpoint?
+1754:  It's not replacing these
+products, it's more consolidating them.
+1770:  So it's the same products, but
+you wanna have the and.
+1784:  The question is about what where
+the where the physical data is stored, right?
+1795:  So we put everything in Adls Gen
+2.
+1799:  We love it.
+1803:  Lovely.
+1829:  If we move, if we go to the
+Delta Lake architecture and right now paying for two copies
+of that data, no, right, right, right.
+1852:  And are things that are
+hydrating, ADLS Gen 2 we can keep using and then leverages
+products, right?
+1871:  OK, so I think that's that's the
+piece that was confusing to us from the release.
+1880:  Yeah, that's the whole idea.
+1909:  If you have ADLS, then to you
+keep using it and you know maybe going forward you start putting
+your new product built on top of the one leg.
+1922:  But ADLS Gen to you are using
+right now.
+1965:  You keep using that one and it
+integrates with the one one leg is behind the scenes, adls Gen
+2, but it's more of like says it means we will do the indexing
+for you, partitioning for you.
+1977:  But if you ID less than two, you
+don't need to move your data.
+1988:  Keep doing the things in idea.
+2033:  Let's do then to and we do have
+like, you know, the shortcut options and and the mounting
+option where you can simply, you know, bring in your ADLS and to
+in one leg itself.
+2051:  So can can we say one leg is
+nothing but an API wrapper on ADLS?
+2064:  This is banned CSA adls Gen 2
+and then the blog storage.
+2070:  Both.
+2072:  Yeah.
+2090:  So when he says mounting, let's
+say our Adls account could be mounted to not.
+2095:  Essentially, copy the data.
+2110:  Just link it to link it to the
+one this API said.
+2147:  So now any tool that speaks that
+one way API can connect and return the need the need and
+then if I'm doing access control I do it at the one leg level.
+2149:  Yeah.
+2178:  In terms of like entitlements of
+users, right, specific tenants etcetera, because that is one of
+the challenges that we have with through.
+2191:  What area is cloud complexity
+of?
+2203:  You know, you guys have 350
+service principles, right?
+2225:  And then we'll come to that,
+because I, you know, it's a great question.
+2238:  I'm not sure if we can talk
+about it now or later.
+2242:  We is here.
+2244:  What?
+2268:  What the question is about right
+in my ADLS, you remember your AD only gives me control just to
+the container level.
+2292:  Doesn't go to individual folder
+level where we use different service principles along with
+the basic controls.
+2308:  So that's how we control who can
+read which subdirectory.
+2322:  We were wondering if I have that
+blue one.
+2365:  You know, just one leg allows me
+at that level of granularity or is it going to be very similar
+to the AAD where it is just going to continue would still
+need to manage through this, right?
+2400:  It will allow you to go through
+more that on we call it the one security and in one leg we will
+allow like folder level security.
+2438:  There's concept of domain and
+workspaces and folders, so you can go to like you know file
+level over there and you can apply even the level security.
+2440:  OK.
+2458:  And then when you say snaps,
+let's say I'm spinning up a synapse engine.
+2501:  I can still connect to the same
+delta file and when I operate on that data file, let's say, make
+some modifications, that modification would be available
+if I'm accessing that same file through another engine.
+2561:  So that's it's a sharable data
+SO11 so idea is that one copy of data and it's accessible by all
+the compute and it means that whatever the changes are in
+their data all times and will be able to see it in real time.
+2571:  So I have a question on that
+power BI.
+2583:  So our reporting tool is Obie
+and Tableau.
+2588:  OK.
+2620:  So are we saying that if you
+want to leverage Fabric, I will need to move to power BI or
+would Tableau in integrate with a with a 1D lake or fabric?
+2625:  Yeah.
+2632:  That, that, that, that's great
+question.
+2664:  So we we recommend to spot where
+but yes idea is that in one leg you do have your data in fabric.
+2682:  Then you can use any of the tool
+with the with, with, with one label or hybrid.
+2718:  But you get the more power when
+you are using power BI because Tableau has some Internet
+internal proprietary format, but power BI directly support the
+Delta format.
+2726:  It means it doesn't make the
+copy.
+2741:  We will get more performance
+when you are using power BI than other tools.
+2743:  OK.
+2762:  But but something like tablow I
+can still make to like on Instagram.
+2771:  I can still make like an OB i.e.
+2777:  Or a NS name.
+2784:  Did I get that right? Pennis
+name? Yeah.
+2813:  Name I had some of those letters
+the article, but we can like for for places where we expect those
+kind of connection options.
+2845:  We can still connect to things
+in it, and we can still assume that the same data structure in
+terms of multi column joins and things is is representative,
+right?
+2863:  Because it's not like the value
+is like, we don't actually care about Tableau or Obie.
+2887:  We care about the reports that
+go against specific existing Ohh existing RDBMS structures that
+are written in there, right? Right.
+2904:  So as long as we can maintain
+those structures, we're OK but through.
+2920:  But, but The thing is, I'll tell
+you the only reason why I have to keep OB.
+2946:  IE, OK, just being Frank is
+because the it's a pixel perfect report because we have reporting
+that does statements and all that.
+2963:  So, and I think power none of
+like Tableau or Power BI supports it.
+2971:  So again, I can't get away from.
+3013:  So my my that's why I was asking
+that question is, is that how compatible and and are you guys
+planning to support pixel perfect reporting in Power BI
+then you know that from the strategy perspective.
+3015:  Yeah.
+3055:  So we can we can check into that
+one, you know pixel format because I I did not hear like
+any issues customer you know using another reporting to like
+Tableau or Power BI with it.
+3110:  But if you have some particular
+report which is not available or some feature not available into
+power BI that that we can check with our product team and and
+the good thing is that right now this product is in in public
+preview, it means we are open to the feedback.
+3143:  So if you have something that
+kind of feedback that you need some support over there, we can
+always work with our product team and they can implement that
+feature before.
+3173:  So if you can can get back to me
+of talking to your product team and see if if they have any
+plans to support pixel perfect report.
+3185:  OK, I I'm really surprised that
+it's not supported.
+3203:  I mean I statement creation, it
+should be but again I I I don't know why.
+3209:  I definitely like Tableau is not
+supporting it.
+3217:  Yeah, probably doesn't support
+either.
+3230:  Yeah, so pixel perfect reports
+and then one OB, IE.
+3246:  Well, the reason why the Obi is
+a tool that supports pixel perfect.
+3248:  OK.
+3251:  Yeah, I do.
+3260:  Oracle BLQ got it, but no.
+3264:  Yeah.
+3273:  Well, going back from this,
+we're doing question.
+3294:  So let's say that pixel perfect
+and is we need them and only will be a supports it.
+3305:  The question is, can I connect
+my OB i.e.
+3310:  Engine to yeah.
+3332:  Fabric and so there will be very
+similar what PC, JDBC drivers and yes same.
+3359:  So we do have concept of luck
+warehouse and we provide the SQL endpoint for the for the one
+links the question yeah.
+3369:  So we do have those things, so
+there's no.
+3377:  So I would continue to use.
+3389:  It is going to be very
+transparent to us, yes, yes.
+3424:  One to help with the power BI
+question, Microsoft in their documentation reports it
+sometimes as paginated reports, and so the question is are
+paginated reports pixel perfect reports?
+3435:  Because it never uses those two
+sets of words together.
+3455:  So yeah, yeah, you know, it's,
+you know, the the way of generating reports.
+3470:  It will print on multiple pages
+in a PDF kind of format.
+3479:  It's called paginated reports,
+right?
+3499:  But it's never clear if it
+supports the regulatory standard of being pixel perfect, right?
+3526:  Yeah, I I think maybe you know,
+because this is something far BI, it's used by all all kind of
+like enterprise customer.
+3558:  I think maybe if you don't have
+then we we should have some work around, but we'll find out from
+our product you know and just pausing here really quick.
+3571:  Anybody that's virtual have any
+comments questions?
+3569:  Yeah, I have.
+3577:  I will comment right?
+3633:  So so the way you started the
+conversation around, you know, Microsoft Fabric and why it's so
+cool the, the whole reason why so cool that you don't have to
+create multiple copies of data when you use with various
+compute engines that are we seeing on the screen right.
+3671:  But at equitable as inflation on
+and then everybody else mentioned, we have our own set
+of compute engines and they some of them are here, but a lot of
+them are not here right now.
+3703:  The value only comes if the the
+Delta lake that we are talking about are supported within the
+compute engines that we currently use at equitable,
+right?
+3714:  So there there's Obi or or
+tableau or or whatever, right?
+3736:  If they natively support those
+delta format, then only the the the real value can be realized
+at Equitable.
+3772:  Otherwise, the only way to get
+real value out of fabric is to to use these tools that are on
+the screen to to be able to leverage this delta lake.
+3790:  Kind of like cubic translate
+where you know you don't have to do anything there.
+3820:  There's one set of data, and
+because these tools have connectors or adapters, you call
+it to connect the data natively without making copies.
+3843:  That's when the power comes is
+that is that right understanding or or or you would change that.
+3848:  Yeah, that that's right
+understanding.
+3894:  And then another thing to
+mention is that because your data is inside the one leg, it
+means you can connect other tool also for example because one leg
+is kind of your ideal extent to store it.
+3922:  So you can, for example, if
+you're snowflake something else, you can always connect those
+tools to the one leg and do that reporting.
+3954:  But thing is that there can be
+some some performance issues with those tools because all our
+tools they are tentatively for the delta format.
+3966:  It's some tool doesn't support
+it means it has.
+3971:  It's some internal proprietary
+format.
+4000:  It maybe copy or do something
+internally, but these tools these compute will provide these
+for the internal format they work in.
+4021:  They talk to each other, they
+work on one copy of the data.
+4013:  Yeah.
+4040:  And and if you if you're doing
+that anyway, then what would be the point of putting data into
+one lake?
+4071:  Because we are currently doing
+it right, we even with ADLS Gen
+4050:  But.
+4071:  2 and all other underlying
+platform, we have to store our data.
+4083:  Our tools are already doing that
+right at that point.
+4093:  What do the value of putting our
+data into one lake?
+4148:  Because at the end of the day,
+it's still don't going to do that conversion and copy and all
+that stuff because the tools that we use, so the value only
+realizes when you actually start using the tools that are on the
+on the screen you're seeing.
+4155:  Yes, that's tools like.
+4170:  That's a big one, but thing is
+that one leg also, we're gonna discuss more.
+4176:  One leg is Sass.
+4206:  Leg it means, for example, right
+now you need to worry about creating the folder steps, not
+to worry about the access you need to worry about.
+4215:  You know, partitioning of the
+file over there.
+4233:  So one leg is says that all
+these things are done behind the scene by us.
+4266:  So you don't need to go and
+create some folder in ADLS, then to you just start using the
+fabric you put their file over
+4262:  OK.
+4266:  there.
+4283:  You create the workspace, you
+mean data message included over there.
+4294:  Got it.
+4298:  OK.
+4301:  That makes sense.
+4310:  Alright, thank you so much.
+4314:  I think there are questions.
+4323:  I think we, Rajendra and Vivian
+has their hands up.
+4327:  Yeah.
+4331:  Vivian, you're first.
+4338:  Alright, a couple.
+4350:  This was around one leg and you
+just referred to it.
+4357:  That will take it up later.
+4374:  So that was my main question
+around like we have data in ADL is.
+4381:  So how does one like play or
+transform?
+4390:  So I'll I'll hold my question.
+4407:  When you get into, uh, one leg
+later, thank you.
+4401:  Yeah.
+4403:  Perfect.
+4415:  So rajendra?
+4464:  Yeah, I'll so as this this slide
+shows and also you mentioned, right, so ideally for fabric and
+you want to have all the Microsoft related components
+here, but do you have the least like which is what other tools
+will be supported by fabric.
+4472:  So for example, we are talking
+about Tableau, right?
+4487:  So we have several reports
+developed in Tableau and Obi right?
+4504:  So are those supported and do
+you have like a comprehensive list for that?
+4530:  Because the overnight these
+tools or whatever work we have done cannot be converted into
+the tools which supported web fabric right?
+4544:  Like ideally supported web
+fabric so.
+4541:  Yeah.
+4545:  So.
+4577:  So then generic answer is that
+because in fabric we this is kind of you know we provide the
+SQL endpoint, we have warehouse over there.
+4603:  So any tool who can connect to
+the SQL endpoint who can connect to the warehouse, they will be
+able to connect to the Patrick.
+4665:  So any kind of tool, whether
+like you do have Pablos some other tool as long as they can
+talk to the, to the, to the warehouse or as long as they
+they can talk with the SQL endpoint of the one leg they
+will be able to you know you you will be able to use those
+programs.
+4693:  Would you are you don't have a
+list of windows who worked opted or certified against.
+4709:  So because this is something we
+do have, like for example synapse or SQL Server.
+4727:  So there are like so many, you
+know vendor 60 similar thing like you.
+4747:  You go against some database, so
+we do many we have some list over there we can. We can.
+4770:  I'll I'll look at it where idea
+is that we provide the SQL endpoints like synapse DWZ over
+there.
+4773:  Similar concept.
+4803:  Any tool which support like SQL
+endpoint or they can go to warehouse they can talk to this
+hybrid right?
+4807:  So so Kapil again follow up
+question right.
+4828:  Again, my question was not only
+limited to say reporting tools like Tableau or OPI, but in
+general right?
+4871:  So for example, in our current
+world, we have data in ADLS, but
+4849:  It's.
+4871:  we have written lot of hive
+scripts right and we build the data product.
+4873:  So tomorrow it's the same high
+script.
+4882:  Will they work against the data
+in the fabric?
+4890:  I mean, that's the question I'm
+asking.
+4893:  Yeah.
+4896:  So.
+4911:  So the one leg is this is fully
+compatible with ADLS Gen 2.
+4929:  So whatever we are doing right
+now, it will be same process with one leg.
+4939:  Yeah.
+4940:  Yeah, but, but, but what?
+4954:  I'm still not having hard time
+understanding is is.
+5004:  I think the Kashyap asked that
+question and I'm gonna read ask that question again and maybe we
+can cover during no Delta Lake conversation is if let's say if
+I don't use these tools that are on on screen, what is the
+advantage going to deal Delta Lake?
+5022:  Because if it's still gonna do a
+shortcut on the ADLS storage.
+5024:  Right.
+5048:  And and I would say it would
+actually slow things down because you are adding a one
+more layer on top of it.
+5050:  So.
+5086:  So what I'm hearing here is that
+if you use this tool, all these tools that are on screen, then
+you're well to use data Delta Lake of or a Microsoft fabric.
+5109:  Let me insert delta like fabric,
+but if you're using tools outside, fabric doesn't make
+sense.
+5128:  That's how I am understanding
+and I don't know if that's the right understanding.
+5136:  That's why I'm asking the
+question.
+5143:  Yes.
+5164:  So it is like you know it's it's
+full product with one leg and all the compute engine.
+5227:  So for example, if if you don't
+want to use computer, that's fine, that's but one leg has its
+own advantages because it's has leg software as service and then
+we provide, you know, all kind of management, you don't need to
+create folder, you don't need to partition it and all these
+things are done by Microsoft.
+5276:  So and there is like, you know
+management concept call, sorry one security, it means if we
+implement the security in one layer any for anyone you is is
+you know curing it it will it will apply that security.
+5304:  Also, one leg has its own
+advantages, but The thing is that you have to look at like
+the way how you want to use it.
+5322:  What kind of compute you want to
+interact that one leg with, but one leg is different?
+5358:  I mean it's it's concept basic
+concept over here but it provides enterprise level of you
+know the one leg over there sacrified one leg.
+5368:  But then I have to maintain
+security two places, right?
+5383:  Again, either unless I move all
+my ADLS storage into one lake.
+5390:  You understand I can't have
+both, right?
+5434:  Because if I'm doing both, my
+security has to be maintained in two different places,
+maintaining on Delta Lake doesn't help me because you may
+have we have processes that are running against the current ADLS
+storage, right?
+5436:  Yeah.
+5476:  So and that that's that's very
+important because idea is that you can you can integrate
+adolescent you create create the shortcut or mounting over there.
+5517:  But longer term, if you want to,
+you know, have full enterprise and to and you know very
+efficient system that plan is that slowly you will start
+having a whole kind of data into one leg itself.
+5532:  So basically, so that's why I'm
+trying to make sure.
+5565:  So we all understand that the
+the advantage of fabric is if we move everything today, Delta
+Lake, that's yeah, that's where you get more efficient, more
+efficiency, right?
+5598:  So either we use this tools
+right and then you have shortcuts to ADLS, or we migrate
+from adls to Delta Lake or one or one lake.
+5619:  Sorry, one lake and and you have
+other tools coming to one leg.
+5627:  Then you're security and
+everything is simplified, right?
+5703:  So so I I think we have to take
+a look, look it from that angle perspective that if you don't
+want to use all these tools and and you want to use fabric then
+you have to move all your storage data and and that's why
+I'm repeating just to make sure I understand, ADLS into the one
+lake then only there is a benefit to fabric.
+5724:  And if we don't move it, and if
+you don't use these tools, then you should stay where you are.
+5745:  Well, so yes, but I I think that
+the piece would be right.
+5794:  I think I think what you're
+saying is the full value proposition is if you do all of
+these pieces right, if you think about it on a build ability
+plan, right, and you're replacing things piece by piece,
+you get some benefits along the way, right?
+5824:  So if we look at this and we
+say, well, actually we might wanna move things to the one
+lake because then we can integrate per view, right?
+5841:  And then that's a step one on a
+build plan of getting here.
+5876:  And then we say, yeah, the other
+items we we pick off opportunistically like I think
+what you're saying is you get the full value if you do all
+those things right?
+5901:  It's not practical for us to do
+all those things tomorrow and so if the rest of it makes sense,
+then it would be.
+5940:  What is the order that we do
+things in realizing that like any other migration plan, there
+is going to be places along the path where you're in the danger
+of if the project gets abandoned?
+5956:  I'm maintaining 2 things that
+have duplicative functions and knowing equitable you fall in
+that trap.
+5958:  Right.
+6007:  And that's why I'm trying to
+understand is that when we do a proper position of this platform
+from the enterprise perspective, UMM, we have to either say yeah,
+this is our target state and and do a multi year commitment umm.
+6025:  Then only we move in this
+direction or we have to stay with where we are.
+6033:  That's all I want trying to
+make.
+6043:  I want to make sure I understand
+it correctly too.
+6078:  Makes perfect sense and I think
+when we think through that build plan, there are places in it
+where we have features that could be replaced relatively
+easily.
+6137:  And then other ones that where
+we have the risk of in the process of decreasing technical
+debt, increasing it, because if we don't finish that segment of
+the project, we're in a worse place than we were before we
+started, because now I'm maintaining 2 things like
+example here, I see Azure AI, right?
+6170:  So obviously we are already
+talking about ML Studio and that to be used is that our starting
+point and then what else we gonna start add to it right?
+6187:  Like purview, so and and that's
+why I was asking that question is is is.
+6204:  Do I understand it correctly and
+and or maybe not and that's why I was clarifying it.
+6215:  I think there are a couple of
+hints.
+6220:  Roof was first and then mano.
+6224:  Yeah.
+6227:  Thanks, Liz.
+6234:  I actually have two questions.
+6269:  So when we're talking about the
+advantages of this using Microsoft Fabric, do we have any
+plan to project like how it's going to help financially for,
+for the organization?
+6288:  Or is there any plan to show the
+financial road map using the the Microsoft Fabric in
+organization?
+6299:  And my second question is a
+little tech from the technology standpoint.
+6315:  So consider we move for all our
+technologies to this one leg platform.
+6339:  So what's the guarantee that the
+SLA's would be maintained as per the the commitments?
+6348:  These are the two questions.
+6344:  Yes.
+6349:  Yeah.
+6357:  So, so so the these are great
+questions.
+6371:  So you know for so I'll take the
+second question first.
+6376:  You are saying that about
+commitment.
+6380:  Yeah.
+6404:  So commitment is is something
+you know it's the same service like you are using ADLS 10 to
+right now.
+6553:  And when you have, like, you
+know in ADLS Gen to you go ahead and and you. You spin up your
+ideal Zen to and we provide the commitment over there for SLA
+for adls. Gen 2 different databases. Similar way for the
+fabric also you do have you do have capacity plan. So you'll
+choose the capacity on you get the you know the whatever the
+compute based on the capacity plan and also you get the SLA so
+from the Microsoft. So we did you see like similar blower at
+the other Azure services. You know, and like ADLS. Gen 2 or
+other kind of snaps computer.
+6567:  You're using, so you should.
+6574:  Similar concept over here too.
+6586:  We provide the SLA and we
+provide different capacity of different sizes.
+6588:  Yeah.
+6642:  And then for pricing similar to
+what compelled you said it's close to impossible for us to
+just say this is what price would be without knowing compute
+storage users, all those things as we if we do want to move
+forward, we would do PFC's.
+6691:  'S You would start small, we get
+extrapolate from there what an annual run rate would be of
+Azure consumption, but you know we can go through the pricing
+and what you know overall take a pause will be in stores and all
+those things.
+6708:  But until we know what the
+sizing would be, it's impossible for us to forecast them.
+6717:  But have we talked about
+shareable compute?
+6721:  Yeah. Yeah.
+6728:  No, no, we haven't.
+6734:  Is it like first like?
+6748:  I guess it will be, but I like
+it.
+6753:  It's it's a good discussion,
+right?
+6768:  We, but on the pricing side
+could build, we'll touch on it.
+6793:  Yeah, the the computer is going
+to be scalable across these products and it's gonna be more
+costly there.
+6803:  The more you use, the more cost
+effective it would be.
+6819:  So that's just Microsoft and
+Microsoft, so it's a good plan.
+6863:  But again, pricing is a little
+bit too early here, but in a similar vein, but it will be you
+know it will be like very I would say cost effective because
+everything is in serverless.
+6871:  My wife said the same thing like
+you.
+6873:  You, you.
+6878:  Why not?
+6883:  We'll give you.
+6884:  Yeah.
+6892:  So yes, so right, right.
+6900:  That was talking about the data
+product.
+6907:  I just want to expand on that,
+right.
+6930:  So right now our data product
+they use HIVE or Impala queries and mainly OK.
+6956:  So when when you were saying
+that how the data product can be migrated to say you know fabric.
+6962:  So are you, miss?
+6968:  You don't like, have you tested
+that?
+6973:  You know all these engines,
+right?
+7037:  Like you know have engines which
+we have uh you know from Florida or you know the Impala engines.
+7039:  They're all seamlessly supported
+or there is like variant and then we may have to retrofit all
+the codes so that it works on fabric. Uh that is question #1.
+7049:  #2 is right now we have like 2
+layer of security.
+7056:  One is through the cloud era.
+7083:  We are using Ranger OK and that
+is 95% of the security because very, you know, not very often
+people go to ADLS Gen 2.
+7094:  So ADLS Gen 2 is black box for
+everybody.
+7126:  OK, but send your tools like
+data bricks or semi developers who who directly want to go to
+the ideal agent to to grab the file for them.
+7173:  We are using AD and then we have
+put the Eccles you know on each of the folders and subfolders
+you know and those are maintaining our you know in our
+scripts and local LDAP.
+7194:  So you're saying that both the
+security will be we will be combining the one security which
+you are going to discuss?
+7196:  Yeah.
+7213:  So it once security and I'll
+take the first question first.
+7228:  So, you know, talking about the
+hive and those things, yes you can.
+7252:  You can bring in, but you get
+more value when you have your data and one leg and then one
+leg itself.
+7257:  You do have this.
+7271:  Sorry this different compute and
+using the different compute.
+7292:  For example, if you not do ad
+hoc exploration, so we provide the spark in the node there.
+7464:  So use that in the node there so
+you do you have once your data are there then recommended ways
+that use our annual corrins and over there to do maybe Adobe
+queries over there or some sort of like you know maybe if you
+want some dedicated compute over there you can use our data
+warehouse over there so that's the whole idea or where we
+recommend that don't bring your like old thing you do over there
+and make it more complex because we want to simplify it we want
+to make it a software service so over here idea is that you bring
+your data over there and approve of it you use all the like
+compute provided over here then life will be really easy and it
+will be seamless if you start putting those things over here
+then it will be really really complex to maintain and some of
+that.
+7481:  So, so so the data product which
+we have built and we have spent a lot of money to build it,
+right?
+7515:  Saw how that can be migrated to
+your your YOUR tools because they are right now they're using
+telling engine right provided by the and Cloudera.
+7518:  Yeah.
+7579:  So so we have to work on that
+migration plan because we need to know more about that
+application and then how we can have inside one layer and maybe
+we can replace what are the you know queries you have using one
+of the enzyme over here maybe spark inzone or maybe we can use
+the data warehouse.
+7601:  So we have to look at the
+workload and then see that what?
+7629:  So basically, so basically it is
+a, you know it may not be as seamless migration, that's what
+you're getting to.
+7627:  I my Manu, let's take the
+migration.
+7640:  Umm, no, no, I haven't.
+7657:  We'll talk about that when we
+decide, yeah.
+7654:  I would just really like curious
+that you know this.
+7697:  You know this things right, like
+how it works in the fabric, it has to be migrated or it can
+work as is because the data is
+7699:  So the question.
+7697:  already in ADLS Gen 2, right?
+7731:  And they're saying that, OK, we
+want it in fabric, OK.
+7766:  Yes, I I I can rent through
+that, but it it seems like if I'm getting this correctly,
+monitor your question is like how would hive or Impala queries
+be supported in fabric is that?
+7757:  Yeah.
+7759:  Yeah, correct.
+7780:  Yeah, because the earlier they
+said, OK, you know, Adidas genetic gentle can be mounted to
+fabric.
+7782:  OK.
+7795:  So OK, it is mounted to fabric,
+then all the queries right?
+7830:  Are they going to run seamlessly
+or, you know, after mounting or you know they have their, you
+know, give, you know, there will be, like they may not be
+compatible.
+7835:  Yeah.
+7843:  That's what.
+7838:  I I I don't.
+7844:  I don't.
+7853:  I think this is a very two new
+good.
+7858:  I'll be just blunt, OK?
+7869:  This is just too new product to
+answer that question.
+7871:  Yeah.
+7873:  Yeah.
+7914:  So they they have like some
+changes you have to make because this is yeah, spark work behind
+the scenes manage spark and their conversion difference and
+all those things.
+7920:  But those are the details.
+7965:  When we start you know,
+migrating on these you know, we have a look into detail that you
+know what kind of queries. You are running? What kind of
+version.
+7967:  You have and.
+7995:  What kind of things we support
+in in Spark engine but good thing is that the spark we
+provide you can create your own spark cluster and you can know
+install any libraries or something like that.
+8016:  So you do have you do a
+flexibility over there, but we have to look at that.
+8021:  You know, what are those
+scenarios?
+8055:  What kind of files, theories and
+what you are doing over there and then you know maybe suggest
+a path over there then how we can do it better?
+8069:  Which spark being more
+performant than than you said?
+8073:  I haven't polo.
+8077:  I'm sorry.
+8095:  Could you would spark queries be
+more performant than than the current queries that we have?
+8097:  Yeah.
+8102:  Well, I would think.
+8127:  See, right now we'll cloud test
+framework, so technically we should solve memory resident.
+8143:  So you should have a high have
+similar experience like spark, but we you can assume Spark is
+much faster.
+8170:  No, but I think that where Manu
+is coming from is saying we have built out 2000 processes
+already.
+8265:  So he's trying to understand his
+do I need to modify those all now to to really be really
+beneficial or would they work as is because as as part of our
+decision making, which makes sense now I'm thinking more
+about it is that hey, if I have to change all those 2000
+processes to be any beneficial, well, I don't know if the the
+the cost of of migrating would be can I try to help you say
+right now my hive and Impala are using a BFS API commands right.
+8271:  Right.
+8273:  Your BLOB storage.
+8276:  Yeah.
+8281:  Files just communicate.
+8300:  Let's for a minute assume my
+high is not going to be on our your fabric right now.
+8339:  You can can I used the same
+maybe if it's API can I direct it to your fabric and would that
+continue to access the same files and operate?
+8344:  That's the question. Yeah.
+8370:  So I I said like one leg is
+it's, you know it's fully compatible with with ADLS Gen 2.
+8389:  So if you are using an anything
+in ADLS, then two is from using my.
+8402:  If underneath the covers if I'm
+using ADF S, Yeah, can we?
+8433:  I think specifically I don't
+wanna be hypothetical, but if you complete that question and
+get back to us, I think it would be so.
+8449:  So right now what we're asking
+is, OK, I mount adls into fabric.
+8475:  Yeah, yeah, my Hive is currently
+connecting to a, you know, to ADLS Gen 2 and using ADF S
+internally.
+8481:  Would it be seamless?
+8503:  Like all I have to do is point
+to the endpoint like you are talking about it and my code
+will work.
+8507:  Yeah, that's right.
+8509:  Yeah.
+8529:  Yeah, you can confirm, but it's
+it's like you know it's 100% compatible with Adls Gen 2.
+8543:  So whatever you are using, you
+know the ADFS over there.
+8549:  OK, you can use the same.
+8551:  Yeah.
+8557:  OK.
+8566:  Well, that last question is that
+fair enough, mano?
+8579:  Yeah, Ishwar has a question.
+8581:  E Yeah, it is not.
+8606:  Not not like a a comfortable
+with ADLS gentle because none of our product is compatible with
+ADLS Gen 2.
+8623:  There is a, you know, compute
+engine right, which is doing that job for us.
+8630:  But.
+8658:  So that compute engine is cloud
+era is providing OK. So when I
+8643:  You gotta.
+8658:  run any query.
+8692:  It goes through the Cloudera,
+you know the you know provided you know interface which in in
+terms talks to ADLS Gen 2 in the
+8677:  Correct.
+8690:  Correct.
+8692:  same way in the future state.
+8719:  If I move to fabric then my
+product is going to talk to fabric which will talk to ADLS
+Gen 2 right?
+8732:  Yeah, that is correct.
+8792:  So that, yeah, so so when I'm
+moving the process, I I just wanted to see that how seamless
+you know this, you know it will be or you know there will be
+like a lot of change because I'm
+8771:  It's right.
+8792:  just changing the entire engine.
+8781:  So I'm one.
+8804:  Oh, well, what they're saying is
+right now, as long as you can change your endpoint URL.
+8833:  Yeah.
+8845:  OK, you.
+8865:  Yeah, but I'm not pointing to
+storage account and I'm right.
+8870:  Yeah, but, but that's that's but
+Manu.
+8882:  I'm pointing to Hive server
+right meta server.
+8914:  Like you about my know your
+hives server internally the
+8928:  Yeah, they they do internally
+but but we are not connecting
+8914:  configuration is that that is
+exactly where you.
+8928:  directly to ADLS. Yeah.
+8922:  Then then, right.
+8929:  That's what they're saying.
+8953:  You know, we have to configure
+our hive engine to talk to the fabric.
+8967:  But they don't have high engine,
+they have just.
+8962:  No, no.
+8972:  You're our hive instance will be
+configured.
+8994:  You can you can do that in, but
+you know in in fabric we do have spark cluster.
+9013:  It means only thing you have to
+do is that what kind of spark you are using over there.
+9024:  What are the libraries you are
+using?
+9042:  Because in high cluster you can
+install the libraries similar way you can do over here.
+9067:  So we have to look at that what
+kind of library we are using or what is the spark version.
+9091:  If we have the same thing in the
+same cluster, similar clustering in the fabric, your code
+shouldn't find.
+9095:  I think we'll do.
+9112:  We'll have to do a POC to to see
+how it works, so let's move on.
+9119:  Just say gulf time.
+9131:  I think last question, I think
+Kishore has been patient.
+9139:  So let's take that and then move
+on.
+9144:  OK.
+9203:  So two part question, my first
+question is given if we do not subscribe to Power BI or any of
+the analytic tools, will the copilot that's provided within
+the fabric environment, would it still be able to deliver the
+automated analytics based on the natural language questions that
+might come through?
+9239:  And the second part is, since we
+are talking about 1 lake and the process and compute does fabric
+which I'm thinking as a workspace not as a just a tool
+by itself right?
+9249:  Like with which needs the one
+like and everything.
+9277:  Does it enable data
+virtualization at all or does it all have to go through the one
+leg and that's the only way you can interact with fabric?
+9282:  Yeah.
+9285:  So, so.
+9295:  So just say again you what was
+your first question?
+9326:  First question is how is copilot
+going to be dependent on the power BI or any of the analytic
+tool subscriptions?
+9321:  Yes.
+9340:  So when you talk about copilot,
+there are like two different thing in in fabric.
+9359:  One is another copilot, or we
+can we can call it like you know, code copilot.
+9380:  So if you are using the spark
+notebook or something, you should gonna suggest you the
+code.
+9412:  It's gonna help you over there,
+but when we talk about the reporting copilot, which is, you
+know, the power BI copilot, so that is exclusive to the power
+BI.
+9434:  So if you are using Tableau or
+something like that, there won't be any, any copilot over there.
+9457:  But we do have, for example, if
+you're using notebooks over here, you are writing the SQL
+very old there.
+9467:  There will be copilot.
+9473:  Drive, you know.
+9505:  So if every copilot, which will
+be you can use to write the queries over there, or write the
+some some five spot photo over there, that will be over there.
+9522:  But when it comes to reporting,
+copilot is absolutely to the power BI.
+9532:  If you're using some other tool,
+there won't be any copilot.
+9545:  It must add tool.
+9559:  Vendor doesn't squeeze the
+copilot APIs to build their own, which they might.
+9567:  OK.
+9593:  They might going forward, but
+Tableau or Obie have not done that, which, given that you
+announced the API for building those a month ago isn't
+surprising.
+9596:  Yeah, yeah.
+9613:  OK, so Long story short.
+9628:  And maybe we'll add we we will
+add equitable to that development staff and I think we
+will make it a better product.
+9648:  Uh data virtualization.
+9663:  And your second question was on
+on does fabric enable data virtualization or does
+everything need to be moved into the one link?
+9669:  Is that your question?
+9676:  Yes, that's right, Alex.
+9679:  Yes.
+9691:  So it it depends on the tool.
+9707:  So the tools which which are
+inside fabric all the engines.
+9720:  If you are using them, they are
+working on top of the.
+9801:  This Delta lake itself or the
+one leg itself, but if you have some tool, for example you are
+using some some reporting tool or something like that and there
+you are pointing that tool against the one leg then maybe
+they will make the copy and then you can do all the things or you
+know maybe some reporting or some more analysis on the topic.
+9825:  So our tools, all the compute
+provided in fabric, they are they're working on on one
+popular data.
+9844:  But if you are using some other
+tool, maybe it will pull in that data or do something else.
+9873:  So it depends on you know what
+kind of tool you are using, but all compute provided by us is
+transparent and just work on the one.
+9879:  Copy of data.
+9894:  OK, so so essentially data
+virtualization is not the goal here.
+9899:  That's it.
+9932:  If you want all the features of
+the fabric, data has to be migrated into a A1 lake which is
+supported in ADLS or any other BLOB storage.
+9946:  If that has to be and then work
+on top of that.
+9959:  That's how I'm reading it.
+9969:  Yeah, that, that's where you got
+more and more value out of this product?
+10007:  Do you plan to demo that today
+like like have you separated out copilot versus like spark
+compute or any of the coding areas which involves data
+munging versus the reporting layer itself?
+10029:  Like having copilot on the on
+top of that is that part of the agenda?
+10035:  Yes, that's that's part of the
+agenda.
+10042:  We're gonna show you the demo.
+10041:  OK.
+10047:  All right.
+10053:  Thank you.
+10060:  I was excited for.
+10065:  I had one other questions.
+10074:  Sorry, uh, I'm not able to raise
+my hand.
+10084:  Teams doesn't let me do it for
+some reason.
+10092:  Quick question from a
+development perspective, right?
+10116:  Like, let's say, if we go with
+the full platform, are there any accelerators that will speed up
+the development timeline?
+10139:  Any efficiencies you have seen
+comparative studies with other platforms in the market?
+10136:  Yeah.
+10171:  So we do have all kind of
+another accelerator and also for example, if you decide work with
+the fabric, then we do have some program also.
+10191:  For example, one of the program,
+we call it, you know the the Microsoft Fabric Public Preview
+Buddy program.
+10213:  So we do have our like product
+team also you know helping you out over there because it's new
+product.
+10235:  So we do a solution that's later
+we do a good partner also and we do have engineering team also.
+10255:  And I will say because Microsoft
+is investing so much in fabric.
+10299:  Umm, when customers do wanna
+move over and you select a partner more often times than
+not, we can go to Microsoft for funding and I can just
+accelerate some of those projects.
+10325:  So partners are definitely
+valuable in terms of overall migration and accelerating, but
+you know something that we can talk about later.
+10323:  OK.
+10356:  Any like timelines or any
+efficiency studies that you have done that you could share or
+like what was efficiencies gained competitive studies?
+10360:  Yes.
+10426:  So we do have, you know, for
+example, if you are asking for the for the product comparison,
+we do have, you know I'm gonna show you the demo with which
+compassion of like and the fabric and how efficient it is
+is that you're asking or something.
+10414:  Yeah.
+10418:  Yeah.
+10420:  Mm-hmm.
+10443:  Yep, like if I'm developing
+something on let's say cloud or
+10439:  I know you, yeah.
+10443:  Hadoop, right?
+10462:  It takes 10 days for me to do
+all of the work versus here with all of the platform.
+10480:  How long would it take any
+comparative studies or anything on that lines?
+10485:  Yeah, we we're gonna.
+10499:  We're gonna save that beauty.
+10495:  OK.
+10508:  Alright, thanks.
+10512:  I thought you all your
+development is 5 minutes.
+10518:  That's that's what I tell
+everybody.
+10523:  Alright, sorry.
+10525:  Go ahead.
+10538:  We gonna move on in, in the
+interest of time.
+10566:  OK, so these are the four four
+pillar for the fabric and the first pillar is complete
+analytics platform.
+10590:  It means everything it we cover
+all the scenarios where there is like batch processing, real time
+reporting anything.
+10661:  So anything related with the
+data, you can stay in one platform, you can do it, it's
+unified and it says platform, which means most of the like
+admin work, all those things you know for example going to the
+tables you know we find the partitioning over there doing
+optimization on on the, on the lake files.
+10668:  All these things are done by us.
+10694:  They are taken care of but taken
+care of by Microsoft and then we do have Azure Open AI assisted.
+10727:  It means we do have the copilot
+over there, and we do have coding copilot which can help
+you in coding where it's sequel or profile sparks call any other
+language.
+10744:  So well, what is the real time
+framework you're talking about?
+10752:  Like is it like a car car?
+10754:  The event hub?
+10769:  Yeah, actually sits behind the
+scene is it's event hub.
+10784:  So yeah, there's we, we call it
+in the real time analytics.
+10808:  So I'm I'm I'm gonna show that
+also how it works and then next Miller is lake centric and open.
+10859:  So as I told earlier that we we
+support the the open, open the platform, they're sorry, the
+open format that the format so it's open for example, it's not
+something proprietary to the Microsoft tomorrow.
+10890:  If you wanna use something or or
+or maybe you want to use some more, some other tool or do
+something else, then it's just open format.
+10894:  It won't.
+10922:  It won't be a problem to use any
+other tool which support this open format and then one copy.
+10931:  It means your data is not
+copied.
+10938:  No.
+10982:  If you are doing some processing
+then it's not something that you know somebody doing, processing
+and they made another copy and those kind of things you are
+avoiding using the using the one leg slash leg.
+11000:  So there's only one copy, and
+there won't be any multiple copies over there.
+11029:  And also we do have concept of
+you know boosting also it means somebody you know if you have
+data out there and then you can boost it.
+11057:  You can say that, hey, this is
+the standard copy and everybody will see that copy first over
+there when they're looking at or something.
+11069:  The data set was gonna say so
+like the article or single.
+11079:  Do you have the concept of dirty
+V the you know?
+11121:  Will be with logs and all that
+just to make sure the integrity of the data when somebody's
+updating, whoever is reading so you you support all those
+transactional systems.
+11145:  So all the all the supported
+over there and behind the scene that is taken care by us.
+11190:  So yeah, there is like fully
+acid transaction has a transaction, yeah, OK, over and
+and the last one for one leg is always seeing it means there's
+one copy of data.
+11228:  So it you know, if you data has
+been changed then all the compute will be able to see the
+latest copy of data and data is always In Sync on there.
+11234:  And then empower every office
+user.
+11253:  So it's easily integrate really
+well with the Microsoft Excel Office sold.
+11280:  So for example, in teams you can
+share the report directly and in that sell itself, Excel can
+point to that.
+11297:  But that one layer or or the OR
+the layer or so the warehouse.
+11322:  So all this really integrate
+with the office and then in the end we do have security and
+governance over there.
+11349:  So there will be like by default
+lineage over there and there will be like one security and
+two and security are there.
+11369:  If you implement security at one
+level, it doesn't matter what kind of computer you are using.
+11387:  They gonna follow that same
+security model which are which is which is done at one where
+one.
+11398:  So just pause around here, you
+know?
+11408:  So obviously we've talked about
+governance and security.
+11418:  I mean, that's a big time plus
+here.
+11431:  The other three, you know, we've
+talked about purview integration with office.
+11537:  I think you know that can be
+something we talked about later, but the other two, I mean, how
+much of a benefit do we feel like this can actually provide
+here or is it still, is it almost just like a nice to have,
+you know just trying to understand is this gonna be a
+benefit in the future or is it just a, you know how are you
+doing, are you doing the two that are on the left side there
+on the right on the right hand side governance and security,
+that's a that's a plus, right?
+11541:  That's a bummer.
+11561:  The other three, like you, don't
+wanna see how much of a benefit would it provide?
+11579:  Equitable the link centric open
+is something I think we'll definitely benefit.
+11589:  Yeah, I will talk about it more.
+11610:  Of course, different use cases
+and workloads that we have, how they can benefit from that,
+right.
+11654:  I think the built into office
+piece would be interesting again around the kind of what we're
+doing around data classification of unstructured documents and
+visibility into users and how does it integrate with the kind
+of office experience, right?
+11664:  Can I put them into loop
+components?
+11676:  Can I surface data into their
+can I?
+11683:  Can I link some of this stuff
+through?
+11707:  Power platform more easily to
+let people build business centric applications or business
+centric flows.
+11720:  Alright, so that is interesting
+and terrifies me.
+11745:  As somebody who owns like a a
+compliance organization, but I think those would be interesting
+to push nothing into all the four four.
+11757:  I was just gonna say that all
+four seems to be good.
+11777:  It's just, again, depending on
+what is the business case and and the migration.
+11780:  That's what I'm asking.
+11792:  We've we've definitely talked on
+the right hand side.
+11823:  That's something that we it
+seems almost like something we need to do sooner than later,
+but the other three would be nice to have.
+11843:  But that could be a North star
+that we work towards in the future.
+11874:  I think I think the open AI
+assist right as we talk about productivity and letting people
+do more and get more natural language insights into things is
+pretty compelling.
+11919:  And I think as people start to
+see that in other pieces of our products, we rather than I know
+that like the office components of that and the team component
+of that, we're waiting on pricing for.
+11949:  But I mean, I think as people
+start to use some of that, it will become an expectation and
+people will say why do I need to know SQL?
+11998:  Why can I not just ask the
+machine my question and have it tell me the answer and then send
+it to somebody who's knowledgeable like the people on
+this call to say, do we agree with the method by which that
+answer was derived? Right.
+12017:  So, so the left most piece are
+you referring to like ML Studio or or not so I so.
+12046:  If I have to say leftmost
+columns we don't even have it, so we are just marching towards
+get a bit.
+12060:  Yeah, in one place for one use
+case that we right.
+12067:  No, but at least some.
+12099:  Yeah, let's not, I mean that was
+just what I'm saying is in from from what the word I'm looking
+for is, is like especially my team, right?
+12111:  We are now getting into more of
+predictive space, right.
+12127:  And and I I don't think we have
+made anything based predictive stuff today you using any.
+12137:  And analytical platform.
+12155:  So what I'm trying to say is
+today that's where we are starting from ML studio
+perspective.
+12178:  So what I was trying to get
+that's definitely that we would like to explore right again.
+12250:  So to your point to the right
+also right, so the leftmost and the rightmost, yes, the the lake
+centric can open would be interesting, but I think we
+definitely we we need to we need we have already operationalized
+tools today and that's what I'm trying to head towards is like
+we do have processes.
+12272:  It's not like a anything that's
+making us stop anywhere, but it would be nice to bring it here.
+12300:  But The thing is again the the
+the what whatever we have built out, the second pillar is the
+one that is gonna be a a a lot of ROI.
+12335:  A work that we will need to do
+to really make sense because right now we have too many
+processes already built in that second pillar, but you don't
+wanna totally, right?
+12340:  But you know what?
+12371:  What I'm don't understand the
+folks who could, if I don't have the second pillar, can I get the
+other three pillars there?
+12375:  Yeah.
+12378:  Yeah, I think so.
+12407:  But The thing is what I I think
+what what couple is trying to say is you can still get benefit
+from that one.
+12422:  But if your storage is still on
+ADLS, you may not benefit as much.
+12433:  No, what I'm saying I I agree.
+12460:  But that really that is your
+you, you you get if you have ADLS, you know something, right
+now you get the same benefit.
+12493:  But thing is that because ADLS
+is something you have to manage, but once one leg is that it says
+Lake, it means we manage so much stuff for you.
+12504:  So that's the advantage of
+having one leg over there.
+12516:  Otherwise, ADLS Gen 2 because
+that is also our product.
+12525:  So you wanna get everything over
+there?
+12547:  Only advantage is that only it
+says or everything is like, but they spot is name.
+12566:  Creating the folder domain
+workspaces, those will be done in one one leg and then better
+manage.
+12575:  Yeah, but we don't do that every
+day.
+12579:  Right again, Kapil.
+12582:  So.
+12613:  So the point is what Anand is
+asking is let's say if I wanna out of those four pillars, I
+wanna just work on leftmost pillar. Right.
+12631:  Does your fabric bring any
+benefit or how would we use the fabric?
+12694:  And is there any benefit to it,
+right or we would use just your tools and go against ADLS rather
+than one lake and and the and and work around and and my
+answer would be is if you wanna just use the leftmost pillar you
+just use currently the tools and then go against ADLS.
+12711:  One leg doesn't say you're not
+going to get one way exactly one way of securing.
+12714:  Exactly, exactly.
+12845:  That's what I'm saying that
+unless you enable the second second pillar, other three
+things using so that can be like true or not because yes, you you
+will not get the benefit of one leg, but if you have ADLS then
+two and you mount or remotes have shortcut in in one leg then
+you can get other planet for the compute because we have
+serverless compute you can use any of the computer so there OK
+and you can get the same benefit of the office also and then same
+benefit of governance and security it will be there only
+advantage is that then you'll be missing the set as part of the
+one layer.
+12859:  So I think this conversation is
+what we should be having towards the end.
+12891:  OK, you can start to say, you
+know, these are some of the things are working for us in
+five years versus maybe in six months, right?
+12900:  So build that's back to you.
+12912:  How much more time do you have
+on the presentation?
+12921:  I think, I mean we we haven't
+shown the.
+12931:  So if you're in flight.
+12933:  Thank you.
+12963:  So let me just quickly you know
+these are like introduction was it 30 and then take it 5 minute
+break and then do the day off.
+12965:  OK.
+12970:  Yeah, that works.
+12972:  OK, thanks.
+12996:  Let me go to the it's far this
+this explains about says how quickly go through that one.
+13011:  First principle is 5 by 5 five
+second to sign up five, five minute to hour.
+13076:  So it's mean frictionless on
+boarding and and there's no you know for example right now if
+you want to use some analytics platform, you have to go and set
+up infrastructure over there, some rules, virtual network,
+vnet, you don't need to do all those thing that it that is
+going away.
+13109:  And then if we do have like
+instant provisioning at if you sign up you go there, start
+using it and then success by default it means everything
+specified.
+13119:  You don't have to maintain the
+maintain the lake over there.
+13136:  You don't have to maintain your
+your databases like indexes or some more.
+13197:  Kind of administrator work, so
+once some you sign up you do have you get the tenant and you
+can have those initial setting at tenant level and then after
+that you are good to go and that last one is talking about the
+same thing centralized administration administration.
+13232:  It means once you sign up, then
+you can manage all that ministrator at administration
+thing at the tenant level and their blood centralized
+security.
+13249:  You called one security were
+there and all the compliance are built in.
+13267:  So this shows some like we do
+have different you know optimized persona.
+13286:  So if you are working data
+engineering, then you're gonna see the different UI.
+13310:  If you are working on the on the
+you know machine learning or data science, you're gonna see
+the different UI.
+13328:  So we do have, you know, person
+optimize experience in in fabric.
+13335:  And let me just show you this
+demo.
+13361:  Let me know if you if you can't
+hear you see here on the screen is the part is is everybody able
+to hear?
+13369:  Yes.
+13368:  Yes.
+13371:  OK.
+13372:  Yes.
+13376:  Yeah, we can.
+13387:  I homepage and you're very
+familiar with it.
+13395:  I'm sure this is my own screen.
+13409:  Is the power BI home page and
+you're very familiar with it.
+13419:  I'm sure this is my own party at
+home page.
+13437:  This is where you use power BI
+in order to look at the performance of the power BI
+product.
+13468:  Or maybe look at the usage of
+the scanner API that connects the purview, or look at the how
+you guys are using goals.
+13498:  All this information that I use
+myself now, you have some very similar home page yourself, but
+you may not have this icon here.
+13551:  The follow this icon that shows
+you are now in the V Next preview and this icon allows me
+to switch experiences moving from the power BI experience
+that you see now, perhaps into the data science experience and
+data science experience is all about creating machine learning
+models.
+13570:  So let's see that I can create
+experiments using notebooks and define my machine learning
+models.
+13577:  Or I can switch to different
+experience.
+13585:  This will be the data
+engineering experience.
+13609:  Here you can see that I can
+create like houses using notebooks and pipelines and
+spark jobs.
+13617:  In fact, we're going to use this
+one.
+13639:  So what I'm going to do is go
+and find myself a workspace and this is a A why?
+13646:  Two reasoning demo.
+13681:  This is a workspace activated
+many months ago and it's actually has a bunch of power BI
+artifacts such as reports, datasets and what they want to
+do here is create something new.
+13688:  I want to create my first like
+house.
+13728:  Notice that the new menu here
+shows different items you're used to in Power BI doesn't show
+reports and data set shows a lake house, so I want to give my
+lake what's the name?
+13738:  It's called Demo Lake House.
+13746:  Why or to create it?
+13758:  It's a few seconds and the lake
+house is created.
+13765:  There is no questions were
+asked.
+13788:  Nobody asked me about storage
+accounts about the key vault, about network settings, about
+skews, about Azure subscriptions.
+13794:  Now this is necessary.
+13826:  You immediately get your
+lakehouse created the same way you would get PowerPoint created
+when you ask for it or Excel workbook created when you ask
+for it.
+13834:  So this is the lake house.
+13849:  Let me switch out and let's also
+show you how you create that notebook.
+13880:  I just go in here and say I want
+to create a new notebook and within seconds no book is
+provisioned and I'm ready to go again.
+13895:  Start coding here in Python And
+do some data science or data engineering.
+13900:  Let's go back.
+13938:  Suppose I want to create
+something that is not necessarily data engineering, so
+I can go and instead of just picking the items from the list,
+I can go and look at their whole set of items.
+13969:  I can add to my workspace where
+they data engineering items, data science, Part BI, data
+integration, Cousteau.
+14005:  So in this case, I'm going to
+pick the data pipeline I'm clicking on it within seconds
+it's already provisioned and I can immediately start adding
+activities like copying data into my.
+14012:  This is a nutshell.
+14022:  The experience we get here in
+the SAS world of.
+14056:  Analytics V next workspace where
+your whole project is organized with all the items that you need
+and then the instant provisioning with no question
+asked.
+14063:  Office like that you get here in
+the workspace.
+14076:  So this one what you see here on
+the screen.
+14084:  This one shows that how you can
+simply know.
+14165:  Go ahead and and enable at your
+tenant level and then you can simply you know, go ahead and
+start using it, put your data into link house, create the link
+house, create the workspace and if you want to implement data
+mesh for example you want to have different lake houses for
+different businesses then you can create the workspaces and
+also we have concept of domain so domain.
+14202:  For example, if your business is
+multiple countries, then you can create the domain and under that
+domain you have 3/4 not spaces which are based on the country
+or region or something like that.
+14214:  So data message is already
+included over there.
+14253:  If you have different teams and
+organization and and it's like no easy to easy to start anytime
+you sign up and you don't need to worry about infrastructure,
+those things are preview data.
+14260:  Start start working on it.
+14274:  Start working on development or
+any kind of analysis and and the I.
+14294:  I can assign what type of
+computer I need to run that particular notebook, yes.
+14296:  Yeah.
+14317:  And then I can pretty much
+integrate that notebook with Azure DevOps for deploying the
+right?
+14329:  Yeah, everything CI CD's already
+CC integrated hub too.
+14334:  Yeah. GitHub too.
+14337:  Yeah.
+14351:  So so Anand, can we add one more
+terminology?
+14360:  Lake House tours in this
+exactly.
+14385:  Now we need to change the data
+because like to make out the data that is the Delta lake
+houses.
+14404:  Now that's commonly you.
+14435:  It and it any less, not only
+one, right, there is a lake house, one leg Delta Lake Data
+Lake Lake for me.
+14416:  Exactly.
+14436:  That's I'm trying to say we need
+to start naming with like house.
+14460:  Which lakehouse we are building
+finance lakehouse or IR Lake house, we couldn't agree on one
+word call semantic.
+14487:  And and this is basically linked
+to an Azure subscription and relying on the underlying Azure
+AD tenant associated to that subscription.
+14502:  So it's it's similar to
+Microsoft 365.
+14513:  So this product is more
+comparable with Microsoft 65 than Azure.
+14546:  You don't need to go to Azure,
+so simply is that like Microsoft 365, you buy the tenant and
+somebody you know from from your enterprise.
+14564:  They set up the tenant over
+there, some policies and everybody within enterprise.
+14572:  They can start using it, but
+that is the point.
+14581:  So, wait, wait, wait, wait,
+wait.
+14588:  It's a separate tenant separate
+AVD.
+14594:  It's no, it's just it's same.
+14622:  So right now, for example, if
+you are using Microsoft 365 right now, what power BI it's
+it's same tenant.
+14680:  So if you are using power BI
+over there, you're admin need to go to that that power BI admin
+and there will button that enable enable the fabric one
+once you or she turn turn turn on that button it will be
+available within your enterprise O365 tenants.
+14684:  You'll have access to. Yeah.
+14694:  So it builds through my SCE, not
+my CSP.
+14715:  So it's not.
+14739:  So you can you can do from
+there, but if you are thinking that I want to go through the
+Azure then Azure Portal also you can go to fabric and you can buy
+capacity over there right.
+14741:  Right.
+14764:  I'm just and we should
+definitely take this offline, but just something we'll we'll
+wanna consider is equitable.
+14775:  Has two tenants, one that all
+the Azure stuff is linked to.
+14803:  We can get into why this is and
+one where all the people are, and ADLS is in the one where all
+the Azure stuff.
+14812:  It's not the world people are.
+14838:  So if we're gonna rely on we, we
+might need to move things or we might need to implement
+lighthouse which is the tenant Federation solution.
+14871:  It's it's own whiteboard thing,
+but just we we we don't have a one to one mapping because once
+you create a tenant association, you can't change it.
+14890:  And legally, we had to abandon
+our tenant and we couldn't put people in it.
+14896:  And the French.
+14922:  But yeah, that that's something
+I think we we have to work on that that we will need to work
+on that conversation.
+14928:  That is definitely a bad
+conversation.
+14960:  I mean, I mean, every once in a
+while when we do things like this, we end up needing to talk
+to and I'm trying to remember their names.
+14979:  The two guys who are the chief
+architects for Azure AD because our setups that weird, that's.
+15006:  We can sync up offline and
+that's why maybe this is another just like what you're gonna
+have.
+15012:  What it's called the family.
+15028:  Yeah, but what I it's still, I'm
+trying to understand right.
+15040:  And and again, are you gonna
+kill me or not for this?
+15045:  Right.
+15060:  Just getting access and and I
+know what the Kapil is saying.
+15071:  Are you just go here and turn it
+on on.
+15091:  You create stuff right for me to
+get just ML studio to work.
+15113:  It's taking like weeks, so would
+it we need to go through the same thing here, that good
+question.
+15126:  So that's where this tenant
+comes into picture, right?
+15140:  OK, you're saying this
+particular environment, he is not public.
+15146:  It's private.
+15154:  Your tenant is your tenant.
+15163:  Your tenant is not shared by
+your studio.
+15169:  Now is a public service.
+15180:  Ohh, we are trying to make it a
+private.
+15190:  Alright, OK, guys, that's a big
+difference.
+15193:  Big difference.
+15226:  So, but then when you talked
+about analytic platform on the right hand side, if you're
+telling me now is why is that not part of our tenant?
+15232:  So why are we?
+15240:  Do we need to go through what
+public tenant?
+15252:  Why can't we enable ML studio
+within our ten?
+15260:  Do that if you're not.
+15272:  Now that's what the parts are
+not fabric.
+15281:  Now that's what they're saying.
+15292:  If you turn up the fabric, you
+can turn on ML Studio.
+15299:  It's already taken.
+15304:  All that piping is taking care
+of.
+15306:  Yeah.
+15319:  And then so we just charge to
+Alex Cross Center.
+15326:  We work for the same guy. Never.
+15330:  We're just screwed.
+15337:  We're screwed no matter what.
+15339:  Like.
+15343:  Yeah.
+15376:  And also I'm not studio like we
+don't call AML studio in this you know maybe like but in
+fabric it won't be same as AML studio.
+15408:  We do have data science and
+machine learning, but it's not exactly same as AML studio
+because Azure machine learning is really throwing more
+curveballs.
+15429:  Is like I was calling out like
+you know, when I looked at the UI, it looked exactly like
+database.
+15441:  That's exactly how Databricks
+looks like with personas.
+15453:  Like, yeah, saying you give me
+one persona.
+15455:  You'll have the Mel study.
+15501:  You can do and say Veros persona
+will give me the SQL, so I was just telling Alex that yeah, so
+if we learn and underneath the covers it is using the same
+delta file form like data, it's.
+15505:  So it'll be in.
+15512:  Should be easy transition for
+us.
+15515:  Yeah.
+15533:  Yes, it's more aligned to
+Databricks and Microsoft 365 than anything else.
+15535:  OK.
+15539:  Anything else?
+15547:  That's why we are very close to
+that.
+15570:  So then, are you saying that we
+should move to the fabric rather than databricks?
+15583:  You should move to data breaks.
+15587:  Open fabrics is ready.
+15594:  It's easy transition, yeah.
+15612:  In fact, it took me native
+transition because it is using the same delta, right?
+15633:  Yet it's thing is there data
+breaks no data, bricks can easily work with one layer.
+15678:  So it means if you are using
+databricks, you don't need to like say that we want more of,
+you keep using that you are using that like no and and
+that's the decision point that we are at at this point, right?
+15686:  I'm just trying to understand
+that.
+15700:  OK, so from my perspective, OK,
+so this is not anybody else's.
+15705:  'S We have cloud era.
+15724:  We have one one instance of data
+bricks right and then we have HD insights, OK?
+15743:  And Alex always tells me why
+can't we move there instead of staying on cloud era, right?
+15762:  And and I think we have almost
+agreed on that we should only go to one target.
+15834:  So what I'm trying to say is
+rather than going through all of this, is it right to say, why
+don't we just move to data bricks and and and then that
+gives us all the benefits of rather than, you know, what
+they're saying is if you when you move to databricks, all the
+changes you've done already is compatible with fabric.
+15862:  So you have done essentially is
+almost migrated to fabric, except you're not in the same
+tenant the moment you create this lady tenant, right?
+15872:  Which means that you are now
+part of the fabric.
+15874:  Yeah.
+15889:  And then in the now it's like
+now you lost me.
+15893:  But anyway, that's fine.
+15897:  Don't worry about the.
+15906:  Yeah, I mean, OK, that's the.
+15933:  That's the difference is that
+like data breaks and those are like databricks, like pads,
+service platform and service.
+15940:  This is software as a service.
+16017:  So for example, you create
+databricks workspace, you use create the infrastructure, you
+create the virtual network, do the settings behind the scene
+and then integrate with adls Gen 2 over here you just have the
+tenant, you don't need to worry about infrastructure, you don't
+need to worry about virtual network, you don't need to worry
+about different components booking or lake is managed for
+you.
+16030:  So those those kind of things
+are like it's smooth over here.
+16066:  So this is says and those are
+best pick up a data breaks in privatized is your fabric now
+they don't be OK don't worry about it.
+16083:  So so it just says service and
+that is so moving the databricks is a match.
+16094:  Ohh, we lost it on audio.
+16101:  Yeah, I can't hear them.
+16108:  What's up?
+16116:  Just.
+16127:  OK, wait.
+16121:  And now back.
+16126:  Yeah, we could because.
+16136:  No back. Yeah.
+16143:  It's not one of the other
+Databricks work with with fabric.
+16169:  Thing is that you have one leg,
+so it means one leg is is audio as you audio and behind the
+scene.
+16200:  So if do your data brisk, can
+interact with the one leg, it will do some processing and put
+the data into one leg.
+16222:  So you can you are using the
+compute of databricks but still your data is inside one leg.
+16267:  One leg is part of the fabric,
+so I think the question here is if I have to migrate from where
+I am today from Cloudera and we have some data bricks instance,
+at least one instance.
+16291:  Is it as an interim step moving
+my from Cloudera to data breaks by the virtue of me doing that?
+16299:  I'm almost on the on your fabric
+because.
+16313:  You're laughing again.
+16315:  Yeah, we lost the audio.
+16316:  Yep.
+16324:  I actually video too that pause.
+16326:  No.
+16338:  We we go to Delta Lake or one
+lake.
+16346:  Why do I need Delta lake?
+16354:  It is same thing or same thing.
+16356:  Yeah.
+16373:  Well, but that's one trying to
+understand is is that why do we need to have?
+16385:  So why can't I just move
+directly to the fabric?
+16396:  Ohh you can you can throw they
+said.
+16403:  OK.
+16409:  So that's on the line to add.
+16423:  So now both are same as the
+amount of work.
+16449:  What you have to do to your
+cloud of a job is about something, but then anyway, OK,
+we'll, we'll, we'll we'll talk about it.
+16457:  You still quick 5 minute break.
+16459:  OK.
+16464:  And then we'll come back.
+16476:  We'll say and then we'll go
+towards towards lunch.
+16490:  So we attacked says that no, it
+will.
+16524:  It will go into GA November, so
+if you if you are working on six months, you don't want to stop
+this thing to go see if you're working hard.
+16529:  You're working on databricks
+migration.
+16534:  Keep working on.
+16539:  No, we are not.
+16547:  We are at a decision point.
+16564:  That's what I'm trying to point
+out is that should I stay with cloud error, right?
+16570:  Should I move it?
+16586:  The advantage is to move it to
+data breaks.
+16609:  Or should I move it to HD
+insights OK and and and from my perspective it's a decision for
+me to make is?
+16616:  Where do we move?
+16646:  And my question is if ultimately
+we want to move to fabric, then I would rather wait to move to
+fabric and stay on Cloudera for interim basis.
+16652:  That's where I'm coming from.
+16657:  Maybe that's, you know.
+16659:  Yeah.
+16670:  And then that's that's good
+point.
+16692:  So it's thing is there.
+16684:  Yeah.
+16703:  Nilesh, I agree with your point
+of view here, right.
+16693:  Yeah.
+16695:  Yeah.
+16707:  Or maybe I can put it
+differently, right?
+16747:  Six year down the road as the
+inside data bricks or data fabric which will be viable,
+right or better option if you look down.
+16740:  It's a longer term.
+16774:  It's a longer term, longer,
+longer term is fabric you know because in fabric, right, you do
+databricks, you do have so many other things also.
+16836:  So longer term is the plan is
+that the work toward having having the fabric or they're
+having everything inside one leg, that's the, that's the
+longer term or like and and state architecture we we'll make
+lot of Ohh lake houses and then we'll put light on top of it.
+16839:  OK.
+16849:  Well, then you can buy a light
+lighthouse.
+16852:  Pretty cheap.
+16855:  Yeah, exactly.
+16866:  So we'll, we'll get everyone
+back at 11:40.
+16868:  Perfect.
+16870:  OK.
+16881:  Yeah, 11:40 will do. 2030
+minutes.
+16879:  Like.
+16891:  Finish this up and then break
+the launch.
+16895:  Alright, sounds good.
+16910:  Thank you, guys.
+16916:  Thank you.
+16907:  OK.
+16917:  Then there there's a lot of
+stuff.
+16923:  Thank you.
+16926:  Lot of demos are coming I think.
+16939:  Yeah, I think.
+16983:  And I think when we when we do
+this at the tail end of this, even though people in the room
+were able to see, maybe we're just on the whiteboard, drop,
+drop, draw this out and talk through because I think it's
+doesn't make sense.
+17015:  And then what is the phasing
+plan that we don't blow up the link once you draw it lands on
+all your questions about what it is.
+17030:  You, you, you're you're thinking
+database is different from fabric.
+17046:  But the thing I I think you're
+still, I'm not saying it's different, Sir.
+17049:  I'll.
+17054:  I'll, I'll shoot it.
+17071:  What I'm trying to say is from
+my perspective, it's a migration path character, right?
+17073:  So.
+17103:  So what I'm trying to say is if
+I I understand you're saying it's it's, you're halfway there
+to, to fabric.
+17139:  What I'm saying is, why do we
+wanna do halfway things or and bring put a lot of changes in
+place if if that the target is fabric.
+17141:  OK. No.
+17144:  Hello.
+17183:  Alright, forget about Databricks
+and that when when we put this plan together we put new stuff,
+we build it out on fabric and then have a migration from
+Cloudera to fabric rather than the window.
+17188:  That's all.
+17193:  You know what I think?
+17210:  I'm not answering your question
+is yes, I want it so you have to go and compare.
+17240:  What I don't think that the
+processing part, let's not talk about the data, the processing
+part hi, you are not going to have resource office.
+17253:  We are going to go to what is
+called the spark here, right?
+17261:  Right enough spark.
+17286:  If you're going to convert to
+snapshot, what you're saying is whether you're going to use
+databricks, spark, or synapse spark.
+17291:  It's the same thing.
+17307:  So what is required now is
+converting your height to spa.
+17341:  That is the cost you'll have to
+think about everything, but they didn't say this going to get.
+17335:  Ohland another agree right?
+17348:  Look up with you.
+17349:  But I I agree, but I.
+17432:  I live in everyone, so we're
+gonna get started again.
+17466:  If you could all just hold your
+questions and just put questions into the chat, I think we've got
+another 25 to 30 minutes of fabric demonstrations and
+presentations.
+17481:  So we'll get to your questions,
+but just please put them in the chat.
+17495:  We want to make sure that we're
+on time, so thank you.
+17500:  I don't.
+17503:  So whenever you're ready, yeah.
+17516:  Hey, you know, you're quick
+question.
+17553:  Now remember you said this is
+going to be a 4th 65, so any computer I associate with this
+jobs, right, whether it's an app or what have what have you.
+17577:  Whichever engine it is, those
+can typically similarly come off our reserve pool, and that
+unified compute.
+17582:  You buy one compute.
+17592:  You can use it across all the
+engines, including power.
+17594:  Yeah.
+17614:  OK, now do I have my own
+reservation for these, particularly fabric separately
+from our other.
+17616:  Yeah.
+17626:  So there's conceptual capacity
+in February.
+17630:  OK.
+17639:  We're gonna go like in pricing
+also can discuss more.
+17644:  Alright, OK.
+17668:  So there's, like, you buy the
+capacity that how much and then based on the capacity you wanna
+get compute got it.
+17688:  OK, so something he couldn't do
+your unit transaction units or whatever they are, yeah.
+17705:  For example, in Microsoft 365 we
+do have different launch over there.
+17707:  Similar similar way.
+17709:  OK.
+17739:  So, OK, based on my capacity,
+you will assure me, computer, I don't have to decide whether I
+need a 64 core or 32 core.
+17742:  I just.
+17759:  Yeah, you don't need you
+capacity unified across all the computer.
+17765:  You don't need to say that.
+17774:  All right, now person app.
+17784:  So I need that one that you know
+you that's OK.
+17796:  My next life I wanna know how to
+spell.
+17805:  So that's what I'm trying to
+spell.
+17807:  Can't.
+17814:  Well, but you need AI copilot.
+17829:  No, I can cook very Microsoft
+copilot man 365.
+17835:  Alright, let's let's get
+started.
+17844:  So this is another demo.
+17858:  It shows that how one copy is
+powerful in Microsoft Fabric.
+17868:  So let me play this demo.
+17892:  I wanna take a look at one of my
+recent projects, so I'm going to navigate to the MSA sales
+workspace.
+17909:  The Msstyles project focuses on
+providing revenue reporting for the entire Microsoft
+organization, serving thousands of users.
+17927:  Let's take a closer look at the
+lake house to learn more about the project.
+17949:  The Lake house combines the
+power of the lake and warehouse and is the central repository
+for all synapse data.
+17980:  Everything we show today will
+focus on either feeding data into the lake house or consuming
+data from the Lake house to get insights, predictive analytics
+and more.
+17988:  This is a demanding project.
+18019:  We are leveraging data flows and
+pipelines to ingest thousands of files with over 30 notebooks
+processing 10s of billions of rows of data.
+18046:  But with Synapse V next, we into
+make it really simple to build out these enterprise projects
+that scale to the most demanding customer needs.
+18054:  Let's take a closer look here.
+18073:  I've navigated to a version of
+my emails project at an earlier stage.
+18154:  We have already gotten things
+started with a few pipelines, notebooks and a lake house, but
+there's still plenty to do in this project milestone I want to
+operationalize the Emma sales revenue data to include in my
+reporting solution as a first step, let's create a pipeline
+and let some data into my Lake House pipelines offers me a rich
+set of data orchestration activities to choose from.
+18177:  In this case I want to move a
+couple of terabytes of revenue data out of the finance storage
+account.
+18195:  To do this, I will leverage the
+copy activity which lets me move data at petabyte scale.
+18229:  Since we are dealing with a Tier
+1 system like Emma sales, we will create many parallel copy
+activities that will iterate through the thousands of files
+in our storage accounts.
+18240:  Indeed, a factory simplifies
+this workflow for me.
+18261:  All I have to do is add a
+metadata activity that will list all the containers I want to
+iterate through.
+18291:  Secondly, I will add a four loop
+to my pipeline and place my copy activity inside as a final step,
+I'll add a web activity.
+18312:  They'll send an email
+notification to me every time the pipeline runs, letting me
+know the run has been completed.
+18332:  Now that we have everything
+hooked up, let's go ahead and run the pipeline to copy data
+into the Lake house.
+18361:  We can see that the pipeline has
+been successfully kicked off and we have multiple parallel
+activities created for each container in my storage account.
+18428:  We'll give it a few minutes and
+we can see all the activities have completed jumping into one
+of the activities, we can see that we were able to copy over
+half a TB of data with throughput of 800 megabytes per
+second across all our activities, we were able to
+therefore copy over 6 terabytes of data in just a few minutes.
+18480:  We can see the pipelines have
+successfully copied the data into one leg and our files are
+available for exploration and the Lake house as the next step
+we will need to transform and enrich this data, creating delta
+tables in the Lake House for consumption.
+18490:  To do this, we'll use spark and
+notebooks.
+18502:  I can create a new notebook
+directly from my lakehouse.
+18520:  I can simply drag and drop the
+file directory I need directly into the notebook.
+18534:  This generates me a pie spark
+code snippet for ease of use.
+18555:  Upon running the cell denied
+because a serverless spark life pools, meaning things start to
+run immediately.
+18577:  I can also easily switch over to
+the chart view and start exploring my data in a visual
+way.
+18587:  After some work, we have
+completed our notebook.
+18604:  Our notebook defines the list of
+tables we're going to be creating in our Lake house.
+18622:  It then unions all the files
+needed across storage accounts to create my revenue table.
+18643:  It has a number of calculated
+columns, filters out the revenue forecast and revenue from
+previous years.
+18661:  Finally, it writes the data in
+the Lake house as a delta table.
+18684:  The notebook falls a similar
+process to create the other delta tables like physical
+calendar and product family.
+18709:  Navigating back to the lake
+house, we can see our newly prepared delta tables, which can
+now be shared with the business for consumption.
+18740:  So this this demo is really
+powerful because we were able to copy around like, you know, two
+terabyte of data within like 10 minutes there.
+18762:  So and another thing, it shows
+that all the spot we are using in synapse right now.
+18779:  For example, if you're cluster,
+it will take you know a couple of minutes to come.
+18787:  There's, you know, cluster live.
+18799:  But in in this fabric we do have
+live cluster.
+18831:  It means ads and you submit your
+job immediately when you submit it to the live cluster and it
+will be able to blow the processing and everything.
+18842:  So end to end is really fast.
+18853:  Even the data factory over here
+and he's really fast.
+18873:  There's so much optimization
+over there and behind the scenes, you know, we manage
+everything for you.
+18892:  You don't need to go and do some
+like the cluster settings or those things.
+18933:  You just have your data and
+right click on the data it's gonna create the code also for
+you run that shell no it will load into data warehouse and you
+can you can simply start building reporting on top of
+that.
+18937:  Hiccup.
+18946:  Bill, this is the for a quick
+question.
+18968:  So in in that video on the
+notebook part, no questions.
+18959:  No questions.
+18969:  Yeah, we're gonna be.
+18977:  We're gonna wait till the end.
+18989:  Can you write it down just so
+that you don't forget?
+18991:  OK.
+19023:  Because I think we are getting
+the the presentation, we are slowing down the process or they
+want us to let them present completely and then we'll ask
+questions.
+19047:  That's why if you can just put
+it in the chat, if we can answer it, we'll we'll answer in the
+chat.
+19053:  Otherwise, we'll wait till the
+end.
+19055:  Thank you.
+19062:  Thank you.
+19059:  Sure.
+19085:  So this is 1 copy for all all
+compute you know ads that showed in in previous demo.
+19117:  There's like one copy on
+property you can use use any kind of several serverless
+compute engine over there and also you can start building the
+reports.
+19122:  What's the matter?
+19131:  Demultiplex data personas can
+all work.
+19166:  On top of the same copy of data
+stored in the Lake house, the first users who will feel right
+at home in the next platform is our SQL analysts.
+19171:  Let's take a look.
+19180:  Well, they navigate over to my
+lake house.
+19190:  I can see the option to enter
+warehouse mode.
+19214:  This is because every single
+leak house automatically comes with a serverless sequel
+warehouse without any configuration.
+19237:  As a warehouse professional, I
+can see all the familiar constructs to me like my schema,
+stored procedures, views and queries.
+19254:  As the next step, let's go ahead
+and write a SQL query to explore our data.
+19273:  To get started, I want to see
+how many rows of data I'm dealing with in my revenue
+table.
+19283:  Writing a quick query and editor
+just me.
+19298:  I'm working with 3.5 billion
+rows of data altered in the lake.
+19324:  Let's write another query that
+looks at the sum of revenue and gross revenue across
+distribution channels and fiscal months.
+19341:  We can see the SQL query runs
+and returns a result almost immediately.
+19379:  Scanning all the 3.5 billion
+rows of data and giving me the aggregated numbers, but taking a
+closer look we can see it looks like I'm facing a data quality
+issue with my data.
+19398:  Instead of getting a channel
+name for one of my entries, I'm getting what appears to be the
+GUID instead.
+19429:  I'm going to jump into a
+notebook and new spark to fix the bug, replacing the GUID with
+the correct channel name.
+19437:  What's my notebook has finished
+running?
+19450:  I'm going to immediately rerun
+the query in the warehouse.
+19475:  We can now see that the issue
+has been fixed and all the data appears correctly labeled in the
+table.
+19509:  In synapse, you next we
+automatically leverage SQL and Spark serverless compute to
+ensure that all changes across experiences are instantly
+reflected to the user with zero friction.
+19554:  Finally, the business analyst
+can also make use of the data in the league house by combining
+the data warehouse directly with Power BI, we're bringing the
+Lake house and the warehouse technologies to the 10s of
+millions of power BI users.
+19579:  I can simply navigate to the
+built in modeling view and start developing my BI model directly
+in the same warehouse experience.
+19639:  After all my data has been
+prepared, I can now move into creating a brand new power BI
+report as they click around and getting amazing blazing fast
+performance thanks to the powerbi directly mode with
+direct leak mode, power BI can natively read the parking delta
+format stored in one lake.
+19658:  This means that not only do we
+get great performance, but the data is not duplicated.
+19688:  To achieve this as a final step,
+we can take this even further and empower every Excel user to
+benefit from data stored in the Lake house.
+19756:  Here I'm an excel connected to
+the Emma sales lakehouse and I can easily build out a pivot
+table directly on top of the same data stored in the lake to
+conclude in analytics, we next data engineers, data scientists
+as well as SQL and BI analysts can all collaborate on top of
+the same data with zero friction, zero data movement.
+19763:  It's.
+19809:  So there was showing there no
+how you can have one copy and then you can simply you know use
+any kind of computer available and then you can simply start
+building report and everything staying inside one browser
+window.
+19830:  You don't need to go out, so
+it's one pane of glass and you get all kind of experience.
+19869:  It just being inside single pane
+of glass you can do with the the data engineering data science
+and you can create the report quickly so everything is
+everything is inside.
+19877:  Once we know the loss and it's
+super super fast.
+19885:  And what happened?
+19890:  Why did it go back?
+19938:  So now this one again, no, we
+are comparing with the snowflake because Snowflake it is one of
+our competitor and they always say that you know we do have
+better performance using virtual warehouse and everything.
+19973:  So this one over here shows that
+we are using the same data set and there is no optimization
+done in February or there's no optimization optimization.
+19988:  You know, done in the in the
+word out that different enzymes.
+20013:  So everything over here, same
+dataset, no optimizes and done and we are comparing the
+performance of of Snowflake versus the fabric.
+20035:  So this demo shows that you know
+over here when we start the curing, you know these are
+different step.
+20055:  So one is the top one is the is
+the is the scenario, the fabric and the lower one is.
+20073:  The is the snowflake, so in
+fabric you see the top one.
+20089:  Where are they on the next step
+or there?
+20095:  And and Snowflake is still
+running.
+20137:  Is doing the first first
+calculation over there, so we are doing the same step, but the
+fabric is way way faster than the than the snowflake on on
+same data set without any optimization.
+20145:  Same compute for both. Yeah.
+20175:  So same like compute like you
+know the the same computing tier with Snowflake say that no they
+do have that choice same on our side.
+20200:  So in the in the end, uh, fabric
+is is taking almost, you know, 5.7 second.
+20256:  And for the same thing or BI is
+taking 51 second, so it's almost 9 or 10 times faster than the
+snowflake and then great thing is that the cost you know, so
+it's sorry, she's really, really cost effective for the same
+calculation you know.
+20271:  Ohh for the source of the same
+data set without any optimization.
+20303:  Snowflake and you are getting
+charged, you know, 8K per month while doing the same thing with
+the fabric you are you are getting charged half of that.
+20317:  So you are getting 9 or 1010
+times more performance and it's cost effective.
+20367:  So in the last demo, if you're
+talking about the the power BI for the reporting, and I was
+saying that why Power BI is so fast, because in power BI right
+now, we do have two more.
+20431:  One is direct query mode where
+you you go against database and you pass that SQL to the
+database and database will will do all the processing and return
+the result and then another mode in Power BI is import mode where
+you can import the data inside power BI and the reporting.
+20481:  So import more these faster
+because you are importing the data into power BI but directory
+is more you know it is good when you do you wanna do some some
+real time reporting or you wanna pull real time data from the
+sourcing.
+20506:  So these are the existing power
+BI mode, but for the fabric we introduce new mode called direct
+lag mode.
+20562:  So in direct lag mode what we
+did is that we changed the internal proprietary format of
+the Power BI so Power BI doesn't need to, you know, look at that
+delta table or the OR the lake house and convert the format to
+internal format and do the reporting.
+20594:  Now power BI directly internally
+support the Delta Open file format and it can directly go
+against the the Lake house or read the Delta table directly
+from there.
+20621:  So we are taking the power BI
+Hinds and directly to the Delta Lake where data is stored and
+there is no copying of data.
+20630:  So it's super, super fast
+performance we are getting.
+20676:  So now this is another demo
+which is gonna show that that how fast it is to you know what
+with the power BI and and the fabric here we have a lake house
+containing anonymized finance data.
+20694:  These tables are stored in the
+Delta Lake format and are fully compatible with parquet based
+interfaces.
+20712:  Any tool or process that speaks
+parquet can read these files.
+20738:  The data for the revenue table
+is almost a TB in its raw form, but here it's been compressed
+across 5 parquet files.
+20757:  The tables we see in the
+background in paved desktop match the table names in the
+Lake house.
+20782:  There are nothing more than
+pointers to the parquet files and haven't loaded any real data
+as yet.
+20803:  Power BI can work directly with
+data in the data lake at blazing fast speeds without any prior
+loading.
+20828:  This is because Pablo has
+natively adopted the same Delta parquet format used by the Lake
+House and the warehouse.
+20845:  I'm now gonna create a power BI
+report directly from the data Lake business.
+20862:  Users can create beautiful
+reports in seconds with snappy instant response times.
+20885:  And I'm gonna count the values
+so that we can see we have almost 3 billion rows in this
+table.
+20893:  We've got instant response
+times, instant gratification.
+20901:  Let's struggle on actual revenue
+and fiscal month.
+20909:  Will make it nice and big.
+20929:  We get all the interactivity
+that we would expect and I'd like to point out that the.
+20939:  Query durations are in merely
+seconds.
+20974:  This volume of data would have
+taken hours using standard data ingestion techniques for ETL
+tools with blown the performance benchmarks for reading parquet
+out of the water.
+20989:  Now you may ask, how would a
+schema or data update affect the user experience?
+21010:  Well, let's find out.
+21016:  I have some geography data in
+the CSV file that I'd like to add to the model.
+21021:  I'll convert it to a delta
+table.
+21035:  Refresh the list and it appears
+in the Lake house tables.
+21053:  Now let's refresh the field list
+in paper desktop and there's the new geography table.
+21070:  I didn't have to reconnect and
+the system just picked up where it left off.
+21091:  To summarize, we've unlocked
+massive data with blazing fast performance and we didn't have
+to copy a single row of data.
+21104:  We didn't have to manage ETL
+jobs into the data warehouse.
+21123:  We didn't have to manage data
+loads into the power BI data set.
+21140:  One Lakes unified storage format
+enables a single copy of data that works with spark jobs.
+21168:  Python notebooks is served
+through a data warehouse interface, and users can create
+beautiful power BI reports in seconds without any data
+duplication.
+21180:  So point here is that Barbie.
+21189:  I can directly talk to your one
+leg.
+21275:  So earlier what you used to do
+that we used to have data in one leg or radial extent to then we
+used to put that data in somewhere in SQL pool or some
+database and then power BI will point to that that SQL endpoint
+and get the data and then you can do the reporting over here
+once your data is inside one leg power BI can go against it and
+I'm speed is blazingly fast.
+21326:  It means you don't need to write
+apply the line to take the data from the one label radio less
+than two and load into the some some warehouse and then you know
+power while point to that warehouse and then you start
+creating a report.
+21351:  So once your data is inside one
+let you can directly point a power glide to the one leg and
+start creating your reports.
+21370:  So this next slide is is talking
+to you know about about the about the shortcut, so.
+21405:  Sharing data and only easy as
+sharing file in OneDrive and with shortcut you can you can
+you know share data throughout.
+21409:  You know you can, you can.
+21415:  Consume the data.
+21453:  You can share the data and also
+shortcut allow linking of data in in Azure AWS, Google Cloud
+without any data to plication making one leg the first multi
+cloud data lag.
+21484:  So if you have your data in as
+three or Google Cloud, you can simply create the shortcut and
+and you are you are good to go.
+21504:  You can start using any kind of
+computer available in the fabric to do some analysis.
+21512:  Data engineering for for you can
+start creating the report.
+21526:  To let me show you this demo.
+21530:  This demo explains demo.
+21543:  I'm a data engineer preparing
+data for my marketing team.
+21576:  I've already got a pipeline that
+has ingested data into my lake house and I can navigate to it
+to continue with my project in the Lake house.
+21604:  I've got some existing marketing
+data and as the next step I want to merge this data with
+Microsoft sales data for lead generation reporting the
+Microsoft.
+21608:  Sales team has.
+21617:  Is it to do this?
+21658:  I'm going to add a new shortcut
+which will allow me to create a virtual table inside my
+lakehouse shortcuts enable me to select from a variety of
+sources, including artifacts internal to the platform.
+21681:  Since the Ms sales data is
+already in a lake house, I'm going to select one leg as the
+source.
+21700:  I'm going to give the shortcut a
+name and click the path to the sales table.
+21719:  The table immediately appears as
+a first class citizen in my league house.
+21742:  Nudity has been duplicated, and
+since there's no ETL persist necessary, I will always have
+the most up-to-date data available.
+21747:  But there's more.
+21766:  We know that many enterprises
+have existing data leaks that are external to analytics
+thenext.
+21818:  So if we jump back to adding a
+shortcut and in the external storage section we can see we
+can link to data even outside of the platform, I can light up
+data not only from adls Gen 2, but even places like S3 from
+AWS.
+21853:  Now from my reporting solution,
+I would like to merge customer logos alongside revenue and
+marketing data and I happen to have stored all of these logos
+in an S3 bucket.
+21887:  All I have to do is select
+series of source, give the shortcut a name specified
+solution, populate all my account information and that's
+it.
+21915:  Within seconds I can see a
+shortcut created in the file section, which is the messy
+unstructured data link portion of the Lake house with analytics
+finex.
+21940:  We want to empower users to
+create a data mesh layer on top of all their data with no data
+movement necessary.
+22001:  We can navigate through all the
+different folders and even explore the files despite the
+data never physically leaving as three before I get started with
+my analysis, I realized I'm missing a line of finance
+company logos which I still have on my desktop that I would like
+to include with analytics.
+22020:  We next we strive to make one
+leg the OneDrive for your data.
+22033:  In fact, you can work with it
+just like you can with OneDrive.
+22040:  Let's take a look here.
+22048:  I've opened my local Windows
+Explorer.
+22070:  And you can see that alongside
+my OneDrive folder I also have a one leg folder synced.
+22100:  Navigating through it, I can
+open my IP analytics workspace, my lake house just working in
+and I can navigate to the tables and files folders.
+22133:  If I jump into the files
+section, I can easily navigate through a folder structure, open
+up the retail folder sitting in Amazon S3 directly in my File
+Explorer.
+22167:  I can even open up the same
+image locally that I was looking at in the Lake house, despite
+the fact that it's still sitting in my Amazon storage account.
+22187:  I'm going to jump back into
+files and create another folder for my finance company logos.
+22202:  The experience is just like
+creating any other folder on my machine.
+22208:  I have the company logo images.
+22223:  Saved on my desktop and I'm just
+going to copy paste the folder inside.
+22236:  I can automatically see the
+finance folder show up.
+22253:  My data is now going to get
+synced back into my Analytics V next like House.
+22262:  Let's navigate back and take a
+look.
+22284:  I'm going to refresh the lake
+house and I can see the new finance folder show up.
+22302:  Navigating through it, I can
+easily explore the images inside just like I did on my desktop.
+22346:  Now that I have all my data in
+the Lake house, I can transform it all in the same uniform way
+without worrying whether the data was ingested, whether it
+came from another lake house, or if it came from S3.
+22354:  It's a.
+22368:  This again shows that how it's
+really integrated with Microsoft 365.
+22402:  So for example, if I go to my
+machine and then like right now you do have one drive on your
+machine, similar way you do have one leg over here.
+22409:  So you see, on my machine I
+have.
+22419:  I have mounted one label here on
+my machine.
+22431:  So you can copy data, you can do
+anything.
+22435:  So it's replacing the first.
+22440:  You can use it.
+22460:  You can directly upload the file
+to one leg, so it's like similar to OneDrive.
+22465:  There is one leg drive.
+22471:  Yeah, you can.
+22510:  You know, mount it on your
+machine and then then you can simply like pull the data or put
+the data into into the lake and this is not like downloading on
+your local machine.
+22517:  This is whole remote nice.
+22531:  You you would still have that
+BLOB explorer you couldn't do.
+22533:  Yes.
+22546:  So that that same same the the
+storage explorer.
+22556:  Yeah, that's that's gonna
+connect to the one leg.
+22560:  What?
+22571:  So for ADLS point of view,
+nothing is changing.
+22587:  Same, you know the API,
+everything is supported, even the storage explorer, everything
+stays same.
+22606:  So one leg is fully compatible
+in one like no tool wise with the with the idealistic.
+22608:  OK.
+22630:  But but I know today I can't
+introspect delta file, but you're saying the new one will
+also.
+22635:  Yeah.
+22637:  Support delta files.
+22641:  Yeah.
+22660:  And this one is another demo,
+but this one is is more about showing the databricks.
+22678:  I think you are using Databricks
+right now, so it make more sense.
+22701:  So this shows that how data
+bricks can work with the with the one leg and Microsoft
+Fabric.
+22716:  Just out of curiosity, since it
+is my File Explorer I I get to see my files.
+22726:  Can I open it through excel or
+anything like that?
+22729:  Office tools?
+22739:  Yes, and you'll be office tool
+so great.
+22763:  We're going to take a look at
+how customers can leverage to output of their data bricks
+investments directly in analytics.
+22794:  Phoenix I started out in
+Databricks where I have been preparing some of my orders data
+and can see all of my delta tables behind the scenes.
+22814:  All the data has been stored in
+either my ad last Jim to account or S3.
+22831:  I'm going to write a query to
+take a look at the breakdown of revenue by customer name.
+22844:  I'm going to give this query a
+little bit of time to execute.
+22859:  And after some time we can see
+the results show up below.
+22870:  We're now going to transition to
+the analytics.
+22901:  We next league House experience
+where have started building my sales Lake House and I've got a
+couple of tables here like the product and supplier table.
+22918:  We can see all the data is
+available as folders in one leg stored in the delta format.
+22979:  I would now like to leverage
+some of the data I prepared in DATABRICKS to RECTLY as part of
+my sales lakehouse in order not to duplicate any data in the
+process, I'm going to create a new shortcut going to start by
+selecting the adls Gen two option which contains my orders
+data.
+22996:  I'll go ahead and input the URL
+to my storage account and click next.
+23020:  The final step is to give my
+shortcut a name and specify the path to my orders table
+immediately.
+23057:  My order stacked table appears
+in the Lake house as a shortcut folder in navigating to the
+Tables tab, we can see a delta table has been created for me
+automatically with no configuration necessary.
+23082:  Let's then navigate to our S3
+account where we can see our customer and geography
+dimensions are stored.
+23119:  We can confirm we can see the
+folder with the Delta parquet files, so we'll go ahead and
+copy the S3 Uri we need to connect back in the lake house.
+23135:  We can create another shortcut,
+this time pointing to our S3 bucket.
+23146:  We can paste in the copied 3
+Uri.
+23179:  Let's add the path, just like we
+did with ADLS give to shortcut the name and the customer table
+appears as another shortcut in our Lake house.
+23203:  Navigating to the warehouse
+mode, we can see that all the delta tables are readily
+available in the warehouse UI as well.
+23227:  I can easily preview all the
+tables irrespectively of whether they are stored in one Lake, 80
+less or S3.
+23268:  I'll now write a sequel query
+that joins the data bricks adls data with the One Lake data with
+the S3 data all in a single query that returns me my results
+immediately.
+23286:  I can easily see the revenue
+breakdown by customer and product with no data duplication
+needed.
+23295:  So this is really, really
+powerful.
+23311:  You know you can have data from
+different sources and you can join them.
+23350:  So even like you know, I see
+that customer they have, they are asking that hey, right now
+when we do on Prem database and we are doing the cross database
+joins or something.
+23371:  So it's it's it's it's taking
+that into the next level over here.
+23391:  You can do cross database join
+and apart from that you can do the Cross Lake storage.
+23428:  Also, you can bring those three
+over here and all those things and you can like join all these
+data sources inside one query and then start, you know,
+working on the report.
+23490:  So it's a really, really
+powerful that, you know, you can do the cross database join and
+also cross, you know whatever the sources are supported over
+here like as three and Google Cloud storage and the output of
+this I can create one new URL and attach it as just to my file
+server.
+23509:  So my user when they click on it
+automatically clicks the data and shows in the.
+23511:  Yeah.
+23514:  Yeah.
+23522:  Wow, that would be great.
+23530:  That's what we should be take a
+look.
+23541:  So he's not not bitter woman.
+23546:  Take a look at my view.
+23564:  And then next day is is this is
+more about data mess.
+23587:  So if you have, you know, I can
+have the customer has requirement about data mess,
+different department and business unit.
+23630:  So we support the domains and
+workspaces, so using the domain and workspaces you can you can
+get the data mesh over there and you can apply all kind of flag
+security over there.
+23637:  Human net like folder level and
+low level security.
+23647:  This this will look like this.
+23680:  You know, you do have the domain
+over there like finance, HR and you select the domain and their
+list of workspaces over there.
+23690:  Depending on the what kind of
+access you would over there.
+23702:  And this one shows the
+integration with office.
+23730:  Let's take a look at how Power
+BI is using Azure Open AI to empower everyone to quickly and
+easily find and share insights.
+23738:  Let's start by creating report.
+23749:  Instead of needing to know this
+one is more about the copilot.
+23755:  So this is power BI copilot.
+23762:  How to manually build report?
+23776:  I'm going to use natural
+language to describe what I'm looking for.
+23811:  I want to report summarizing our
+hiring for the last 12 months, broken down by employment type
+and age, with some other interesting filters and fields
+added in.
+23842:  And just like that in a couple
+of seconds, the new power BI assistant looks at my data,
+picks the best charts, and lays them out for me automatically.
+23909:  The report is fully interactive
+and I can already start exploring data and immediately I
+can see the age breakdown of new hires that are requested, but
+instead of stopping here, I'm going to Click to add these
+additional related metrics suggested by my assistant who
+automatically incorporates them into my report by adjusting the
+layout to make room for them.
+23922:  Next, I'm going to ask the
+assistant to change the column chart to a line chart.
+23947:  Now let's change the look and
+feel of the report by asking it to match another report already
+being used by my team.
+23979:  So it's more familiar and easier
+to understand instead of needing to manually go through the 10 to
+20 steps needed to build report in seconds.
+24028:  My AI assistant has helped me
+create just what I'm looking for, and of course if I wanted
+to manually adjust the report, I can since the AI has created a
+fully functional power bear report that I can manually
+customize and adjust as I like.
+24036:  Let's chart change this chart to
+a tree map.
+24055:  Add a breakdown of employee
+functional area and now we can cross filter by this new field.
+24069:  Finally, the AI suggesting some
+insights I might want to add to my report.
+24093:  Again, just by asking, I can add
+the automatically discovered insights as a rich narrative
+summary within the report.
+24118:  These insights, such as seeing a
+seasonal pattern in our hiring, are dynamically generated and
+will update every time our data refreshes.
+24154:  And now I have a finished report
+created in seconds, tailored to my specific requests that would
+have taken significant time and skill to achieve AI capabilities
+based on large language.
+24186:  Foundational models are truly
+revolutionizing how we deliver experiences, and we're thrilled
+to bring capabilities like these into power BI to empower
+everyone to find insights, make decisions, and take action.
+24198:  It's this feature is really,
+really powerful.
+24208:  You know you you just type in
+that.
+24215:  What kind of report you want?
+24276:  And you know the the power BI
+system or copilots you gonna create the report for you and
+also it is it can generate the inside from that report that
+what are the different insight if you want to have some
+narrative over there that you know give me some bullet points
+over there.
+24327:  So all those things you can you
+can do over there and then it is something like that you can ask
+any question or support from the part where assistant you can ask
+that hey, what is the sales number last month something like
+that.
+24352:  So you can talk with the power
+BI stand and it has reference to your data and it can create the
+report.
+24357:  It can give you the insights
+also.
+24370:  Yeah, but how does it know to go
+and get the tables?
+24380:  Which tables to get the
+information from?
+24402:  I understand copilot, but are
+you selecting table 1st and then asking it the the system to do
+things?
+24404:  No.
+24423:  So that's the that's the
+smartness of open AI so ohh man.
+24444:  So that that these are these
+motives you can't like.
+24463:  That's So what they do is that
+ishwar all our predictive analytics project is done in 5
+minutes.
+24467:  Yeah.
+24484:  Well, here's the thing, right?
+So.
+24481:  In English my my question was
+similar.
+24503:  Like, do we have to organize the
+data and the metadata for the insights to be drawn?
+24510:  So.
+24528:  Or just plop plug and play like
+put it on any data set.
+24596:  So it is it's plug and plug and
+play but thing is that for
+24537:  It doesn't.
+24549:  So on.
+24596:  example normally what happens is
+that for example when you table has somewhere revenue in the
+name itself or the right way to look at the columns also that
+what are the columns matching with the natural language
+because open AI model read through schema.
+24629:  I need to know about the column
+and table name and then it comes to the conclusion that this is
+the table and this is the colon to fetch over there.
+24647:  So it's like all all smartness
+done by opening eye.
+24682:  But if you have some confusing
+name over there, then you can give it one example that hey and
+when you table has been named to this table something like that.
+24697:  But otherwise you point it over
+there, it will look at the right column names.
+24716:  Look at the schema and it will
+come to the conclusion and it will bring.
+24738:  The is also relying on stuff
+that purview is doing in terms of human taxonomy of of things.
+24745:  So this one?
+24751:  No, this doesn't rely on the
+Purdue.
+24767:  This is copilot just for the
+part where it relies on your data set.
+24802:  What kind of data your data set
+is having and then it will look at the data, set the field names
+and everything and it will create the report.
+24872:  It will answer the question for
+you so that that's like even on the open AI side, that's the use
+case like I see all my customers, they are going for
+the opening I for the natural language to to codes and this
+and or SQL kind of so behind the scene this is natural language
+to codes and design.
+24879:  So it will create the report for
+you.
+24891:  It will, you know, give all the
+inside.
+24944:  What are the question you ask
+from your patient and the and the other side of that right is
+if we're using GitHub and copilot and we're building our
+workbooks there, you can do the same thing for generating the
+code that we're doing.
+24948:  So.
+24957:  So let me just fix through easy
+to be true.
+24969:  Sorry, I know there were no
+questions you should try it out.
+24980:  Yeah, we should try the the I
+forgot. No good.
+24994:  This is amazing and and for the
+code.
+25014:  Also, you know VS code, I'm not
+sure like you have it or you haven't used it or not.
+25022:  So so there's jobs and called
+chat.
+25038:  This is similar to the Power BI,
+so you see the option over here.
+25052:  Chat so over here for example
+you have some coding file.
+25062:  You can select the code and you
+can ask it that hey.
+25073:  And explain this quote to me.
+25083:  Or you can I can ask that you
+know, right.
+25093:  Ohh write the write some code.
+25108:  Anything you can ask the IT
+will.
+25110:  It will write the code for code
+for me and.
+25146:  And this is the thing that we're
+we're kicking off the POC with established teams in two weeks
+and the interns sort of started all of there's something
+licensing issue.
+25149:  We're still working through.
+25153:  Yeah, we have some.
+25183:  So my only question was, is that
+power BI AI understand it gave you the reports automatically,
+but does it integrate integrate security with it?
+25216:  So like, can I just say, hey,
+give me salary for all the employees, would it just go out
+and give it to me or or how does it fit into the security?
+25228:  So it it depends on on your data
+set.
+25244:  So if you want to use copilot
+with that data set, so whatever.
+25271:  For example, I'm the user and
+I'm using the copilot, but as a user I don't have access to the
+shared data you or she.
+25276:  They won't get the sharing
+Commission over there.
+25280:  No, no.
+25307:  But like you said, the example
+if you go to the video before right you said Power BI right,
+you you said.
+25313:  I wanna see this.
+25319:  I wanna see this.
+25323:  Then what happens?
+25385:  Is it the idea is that if you
+have it, it does the operation like the other things in 365
+does in your context, so it says I'm gonna search things as
+though I were the AI version of Nilesh Patel and limit mine to
+the access of what I could access there.
+25394:  Yeah, this is behind the scenes.
+25417:  Taking your user ID or that and
+based on your excess is gonna provide you the answer.
+25437:  Yeah, but technically you can
+point it against my data lake entire data lake. And then yeah.
+25446:  You mean that you had the access
+access?
+25448:  Yeah.
+25454:  Yeah, pretty much.
+25463:  I can ask any questions for it
+to answer right.
+25479:  OK, I don't need a better
+catalog management or yeah.
+25494:  So let let me I think so. Yeah.
+25501:  But one one caveat.
+25506:  So, so the questions are in
+chat.
+25529:  So let me know when when we are
+ready for it or we doing that before line whenever we are
+ready.
+25539:  So I think people are waiting
+for those questions we have.
+25553:  We have somebody coming to
+present virtually at 1:00.
+25561:  O'clock, I wanna give enough
+time for lunch.
+25570:  So, OK, do we have any more?
+25590:  And I think we are, we do a more
+depending on like if you have question.
+25601:  But I think we we got done with
+the fabric.
+25607:  OK, so we're done with fabric.
+25619:  Uh, we've got questions and
+chats, I think.
+25668:  I think questions in chat we can
+go back and retroactively answer and then if we can't answer them
+over chat, if there a little bit more complex after the purview
+demonstration, we'll answer those and then we'll whiteboard
+at the end of round it out.
+25671:  Does that work perfect?
+25678:  Works for me.
+25728:  So we're saying, uh, maybe
+everybody's back at 10 to 525252 when I will go through the chat
+real quick, we'll see what we can answer and we'll table the
+ones for after the purview demonstration for later today.
+25755:  We'll make sure all of us get
+answered and just by way of protocol, we'll run the speaker
+1:00 PM in the same way chat questions.
+25771:  Let them go through their their
+thing, and then we'll follow up offline.
+25774:  OK, perfect.
+25786:  Alright, see you everybody back
+at 12:55 then.
+25788:  Thank you.

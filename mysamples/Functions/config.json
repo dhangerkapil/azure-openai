@@ -1,0 +1,6 @@
+{
+    "DEPLOYMENT_ID":"gpt-35-turbo",
+    "OPENAI_API_BASE":"https://kdopenai.openai.azure.com",
+    "OPENAI_API_VERSION":"2023-07-01-preview",
+    "OPENAI_API_KEY":"a9f246d92cce4ef5b438ccd8d5917125"
+}
